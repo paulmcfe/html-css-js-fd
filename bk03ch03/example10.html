@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The :only-of-type Pseudo-Class</title>
+        <style>
+            body {
+                margin: 32px;
+                width: fit-content;
+            }
+            aside, div, p {
+                margin: 8px;
+            }
+            article :only-of-type {
+                color: plum;
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <aside>
+                This is the only <code>aside</code> element within the <code>article</code> element.
+            </aside>
+            <section>
+                <div>
+                    This <code>div</code> element is a sibling of the <code>div</code> element, below.
+                </div>
+                <div>
+                    This <code>div</code> element is a sibling of the <code>div</code> element, above.
+                </div>
+                <p>
+                    This <code>p</code> element has no siblings of the same type and it’s a descendant of the <code>article</code> element.
+                </p>
+            </section>
+            <section>
+                <div>
+                    This <code>code</code> element has no siblings.
+                </div>
+                <div>
+                    This <code>code</code> element and this <code>code</code> element are siblings of the same type.
+                </div>
+            </section>
+        </article>
+    </body>
+</html>

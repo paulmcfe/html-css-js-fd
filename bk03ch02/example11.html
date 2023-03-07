@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The Attribute Contains Selector (*=)</title>
+        <style>
+            body {
+                width: fit-content;
+            }
+            div {
+                font-size: 14px;
+                margin: 16px;
+            }
+            div[id*="meat"] {
+                font-size: 24px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="item-meat-first">
+            Bacon ipsum dolor amet meatloaf biltong drumstick buffalo hamburger tri-tip. Ribeye flank turducken, tail ball tip kielbasa salami turkey chicken pork chop.
+        </div>
+        <div id="item-cheese-first">
+            I love cheese, especially cheese slices jarlsberg. Cheeseburger cauliflower cheese smelly cheese who moved my cheese rubber cheese cheese on toast feta cheesecake.
+        </div>
+        <div id="item-meat-last">
+            Chuck cow landjaeger turkey burgdoggen. Pork chop pig doner, tri-tip pork belly kevin prosciutto ham rump.
+        </div>
+    </body>
+</html>

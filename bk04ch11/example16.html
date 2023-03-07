@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Handling and Triggering Form Events</title>
+        <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }     
+            body {
+                max-width: 25rem;
+                margin: 1rem;
+            }
+            button {
+                background: darkblue;
+                border-radius: 10px;
+                color: white;
+                font-size: 1.25rem;
+                margin-top: .75rem;
+                padding: 7px 15px 8px 15px;
+            }
+            p {
+                margin: 1rem 0 0 .25rem;
+            }
+        </style>
+    </head>
+    <body>
+        <button>
+            Run Me!
+        </button>
+        <p>
+        Keyboard shortcut: Ctrl+Shift+B
+        </p>
+        <script>
+            // Add a listener for the button's 'click' event
+            document
+                .querySelector('button')
+                .addEventListener('click', 
+                function() {
+                    // Change the button text
+                    this.innerText = 'Thanks!';
+                
+                    // Reset the button after 3 seconds
+                    setTimeout(() => document
+                        .querySelector('button').innerText = 'Run Me!',
+                        3000);
+                }
+            );
+            
+            // Add a listener for the 'keydown' event
+            document
+                .addEventListener('keydown', 
+                function(e) {
+                    // Check to see if Ctrl+Shift+B are all pressed
+                    if(e.ctrlKey && e.shiftKey && e.key === 'B') {
+                        // If so, trigger the button's 'click' event
+                        document.querySelector('button').click();
+                    }
+                }
+            );
+        </script>
+    </body>
+</html>

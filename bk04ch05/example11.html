@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Replacing a callback with an arrow function</title>
+    <style>
+        body {
+            margin: 1em;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <button id="bgRed">
+        Make Background Red
+    </button>
+    <button id="bgWhite">
+        Make Background White
+    </button>
+    <script>
+        document.getElementById('bgRed').addEventListener(
+            'click',
+            () => document.body.style.backgroundColor= 'red'
+        );
+        document.getElementById('bgWhite').addEventListener(
+            'click',
+            () => document.body.style.backgroundColor= 'white'
+        );
+    </script>
+</body>
+</html>

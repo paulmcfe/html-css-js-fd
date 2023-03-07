@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The subsequent-sibling combinator (~)</title>
+        <style>
+            body {
+                width: fit-content;
+            }
+            h2, h3, ul {
+                margin: 16px;
+            }
+            h2 ~ ul {
+                background: lightpink;
+                border: 5px outset crimson;
+                list-style-type: square;
+                padding: 8px 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Selectors Cheat Sheet</h2>
+        <h3>Standard:</h3>
+        <ul>
+            <li>Type selector</li>
+            <li>Class selector (.)</li>
+            <li>Id selector (#)</li>
+            <li>Universal selector (*)</li>
+        </ul>
+        <h3>Combinators:</h3>
+        <ul>
+            <li>Descendant ( )</li>
+            <li>Child (>)</li>
+            <li>Subsequent-sibling (~)</li>
+            <li>Next-sibling (+)</li>
+        </ul>
+    </body>
+</html>

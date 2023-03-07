@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Aligning flex items along the primary axis with justify-content</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: 100vh;
+                margin: 0.5rem 1rem;
+            }
+            div:has(code) {
+                padding-top: 0.75rem;
+            }
+            code {
+                font-size: 1.25rem;
+            }
+            .container {
+                border: 5px double black;
+                display: flex;
+                flex-direction: row;
+            }
+            .flex-start {
+                justify-content: flex-start;
+            }
+            .flex-end {
+                justify-content: flex-end;
+            }
+            .center {
+                justify-content: center;
+            }
+            .space-around {
+                justify-content: space-around;
+            }
+            .space-between {
+                justify-content: space-between;
+            }
+            .space-evenly {
+                justify-content: space-evenly;
+            }
+            .item {
+                font-family: Verdana, sans-serif;
+                font-size: 3rem;
+                padding: .1rem;
+                text-align: center;
+            }
+            .item1 {
+                background-color: hsl(0, 0%, 94%);
+            }
+            .item2 {
+                background-color: hsl(0, 0%, 88%);
+            }
+            .item3 {
+                background-color: hsl(0, 0%, 82%);
+            }
+            .item4 {
+                background-color: hsl(0, 0%, 76%);
+            }
+            .item5 {
+                background-color: hsl(0, 0%, 70%);
+            }
+        </style>
+    </head>
+    <body>
+        <div><code>flex-start</code></div>
+        <div class="container flex-start">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+        </div>
+        <div><code>flex-end</code></div>
+        <div class="container flex-end">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+        </div>
+        <div><code>center</code></div>
+        <div class="container center">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+        </div>
+        <div><code>space-around</code></div>
+        <div class="container space-around">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+        </div>
+        <div><code>space-between</code></div>
+        <div class="container space-between">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+        </div>
+        <div><code>space-evenly</code></div>
+        <div class="container space-evenly">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+        </div>
+    </body>
+</html>

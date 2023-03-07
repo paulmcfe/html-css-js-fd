@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Reversing the order of an array’s elements: reverse()</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            const myArray = ["Show", "Place", "Win"];
+            myArray.reverse();
+            console.log(myArray);
+            const aTest = myArray.find(element => {
+                return element === 'Win';
+            });
+            console.log(aTest);
+
+        </script>
+    </body>
+</html>

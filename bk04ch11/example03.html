@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Setting a text field value</title>
+    <style>
+        body {
+            margin: 1em;
+            font-size: 1.5em;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type='url'] {
+            width: 400px;
+            margin-bottom: 1.5em;
+            font-size: .75em;
+            font-family: Monaco, Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="homepage-field">
+            Type your homepage address:
+        </label>
+        <input id="homepage-field" name="homepage" type="url" value="HTTPS://PAULMCFEDRIES.COM/">
+    </form>
+    <script>
+        let homepageField = document.getElementById('homepage-field');
+        let homepageURL = homepageField.value;
+        homepageField.value = homepageURL.toLowerCase();
+    </script>
+</body>
+</html>

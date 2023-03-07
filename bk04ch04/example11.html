@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Using for Loops</title>
+        <style>
+            body {
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            let sum = 0;
+            let num;
+            do {
+                num = prompt("Type a number; when you're done, click Cancel:", 1);
+                sum += Number(num);
+            }
+            while (num !== null || sum === 0);
+            document.write("The total of your numbers is " + sum);
+        </script>
+    </body>
+</html>

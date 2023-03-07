@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Aligning grid columns with align-content</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            body {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 1vh;
+                align-content: flex-start;
+                height: 100%;
+                margin: 0 0.75rem;
+            }
+            .wrapper {
+                position: relative;
+            }
+            .container {
+                border: 5px double black;
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: repeat(3, auto);
+                margin-top: 1.5rem;
+                height: 43vh;
+                width: 23vw;
+            }
+            .container::before {
+                font-family: monospace;
+                font-size: 1.25rem;
+                left: 0;
+                position: absolute;
+                top: 0;
+                z-index: 1;
+            }
+            .stretch {
+                align-content: stretch;
+            }
+            .stretch::before {
+                content: "stretch";
+            }
+            .center {
+                align-content: center;
+            }
+            .center::before {
+                content: "center";
+            }
+            .start {
+                align-content: start;
+            }
+            .start::before {
+                content: "start";
+            }
+            .end {
+                align-content: end;
+            }
+            .end::before {
+                content: "end";
+            }
+            .space-around {
+                align-content: space-around;
+            }
+            .space-around::before {
+                content: "space-around";
+            }
+            .space-between {
+                align-content: space-between;
+            }
+            .space-between::before {
+                content: "space-between";
+            }
+            .space-evenly {
+                align-content: space-evenly;
+            }
+            .space-evenly::before {
+                content: "space-evenly";
+            }
+            .baseline {
+                align-content: baseline;
+            }
+            .baseline::before {
+                content: "baseline";
+            }
+            .item {
+                font-family: Verdana, sans-serif;
+                font-size: 2rem;
+                padding: 1rem;
+                text-align: center;
+            }
+            .item1 {
+                background-color: hsl(0, 0%, 94%);
+            }
+            .item2 {
+                background-color: hsl(0, 0%, 88%);
+            }
+            .item3 {
+                background-color: hsl(0, 0%, 82%);
+            }
+            .item4 {
+                background-color: hsl(0, 0%, 76%);
+            }
+            .item5 {
+                background-color: hsl(0, 0%, 70%);
+            }
+            .item6 {
+                background-color: hsl(0, 0%, 64%);
+            }
+            .baseline > .item1 {
+                background-color: hsl(0, 0%, 94%);
+                height: 60px;
+            }
+            .baseline >.item2 {
+                background-color: hsl(0, 0%, 88%);
+                height: 90px;
+            }
+            .baseline >.item3 {
+                background-color: hsl(0, 0%, 82%);
+                height: 75px;
+            }
+            .baseline >.item4 {
+                background-color: hsl(0, 0%, 76%);
+                height: 50px;
+            }
+            .baseline >.item5 {
+                background-color: hsl(0, 0%, 70%);
+                height: 55px;
+            }
+            .baseline >.item6 {
+                background-color: hsl(0, 0%, 64%);
+                height: 90px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+        <div class="container start">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+            <div class="item item6">6</div>
+        </div>
+    </div>
+        <div class="wrapper">
+            <div class="container center">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+                <div class="item item4">4</div>
+                <div class="item item5">5</div>
+                <div class="item item6">6</div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="container end">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+                <div class="item item4">4</div>
+                <div class="item item5">5</div>
+                <div class="item item6">6</div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="container stretch">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+                <div class="item item4">4</div>
+                <div class="item item5">5</div>
+                <div class="item item6">6</div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="container space-around">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+                <div class="item item4">4</div>
+                <div class="item item5">5</div>
+                <div class="item item6">6</div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="container space-between">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+                <div class="item item4">4</div>
+                <div class="item item5">5</div>
+                <div class="item item6">6</div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="container space-evenly">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+                <div class="item item4">4</div>
+                <div class="item item5">5</div>
+                <div class="item item6">6</div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="container baseline">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+                <div class="item item4">4</div>
+                <div class="item item5">5</div>
+                <div class="item item6">6</div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>What Is an Array?</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+            div {
+                margin-top: .5em;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            const dog1 = "dog-1";
+            const dog2 = "dog-2";
+            const dog3 = "dog-3";
+            const dog4 = "dog-4";
+            const dog5 = "dog-5";
+            const promptNum = prompt("Enter the dog you want to see (1-5):", "");
+            
+            if (promptNum !== "" && promptNum !== null) {
+                const promptDog = "dog-" + promptNum;
+                if (promptDog === dog1) {
+                    document.body.style.backgroundImage = "url('images/" + dog1 + ".png')";
+                } else if (promptDog === dog2) {
+                    document.body.style.backgroundImage = "url('images/" + dog2 + ".png')";
+                } else if (promptDog === dog3) {
+                    document.body.style.backgroundImage = "url('images/" + dog3 + ".png')";
+                } else if (promptDog === dog4) {
+                    document.body.style.backgroundImage = "url('images/" + dog4 + ".png')";
+                } else if (promptDog === dog5) {
+                    document.body.style.backgroundImage = "url('images/" + dog5 + ".png')";
+                }
+            }
+        </script>
+    </body>
+</html>

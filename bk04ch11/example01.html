@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Referencing text fields by field type</title>
+    <style>
+        body {
+            margin: 1em;
+            font-size: 1.5em;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type='url'] {
+            width: 400px;
+            margin-bottom: 1.5em;
+            font-size: .75em;
+            font-family: Monaco, Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        List your favorite JavaScript sites:
+    </p>
+    <form>
+        <label for="url1">
+            Site 1:
+        </label>
+        <input id="url1" type="url" name="url1" value="https://">
+        
+        <label for="url2">
+            Site 2:
+        </label>
+        <input id="url2" type="url" name="url2" value="https://">
+        
+        <label for="url3">
+            Site 3:
+        </label>
+        <input id="url3" type="url" name="url3" value="https://">
+    </form>
+    <script>
+        let urlFields = document.querySelectorAll('input[type=url]');
+        console.log(urlFields);
+    </script>
+</body>
+</html>

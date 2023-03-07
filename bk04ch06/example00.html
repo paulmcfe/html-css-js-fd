@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Rolling your own objects</title>
+        <style>
+            body {
+                height: 100vh;
+            }
+            button {
+                margin-top: 1.5rem;
+                padding: .5rem;
+                font-size: 1rem;
+                border-radius: 10px;
+                box-shadow: 1px 2px 3px black;
+            }
+
+        </style>
+    </head>
+    <body>
+        Welcome to my web page!
+        <div>
+            <button>Reset preferences</button>
+        </div>
+        <script>
+            const userPrefs = {
+                bgColor: "darkolivegreen",
+                textColor: "antiquewhite",
+                textSize: "1.25em",
+                typeface: "Comic Sans",
+                resetDefaults: function() {
+                    document.body.style.backgroundColor = 'white';
+                    document.body.style.color = 'black';
+                    document.body.style.fontSize = '1em';
+                    document.body.style.fontFamily = 'initial';
+                }
+            };
+            document.body.style.backgroundColor = userPrefs.bgColor;
+            document.body.style.color = userPrefs.textColor;
+            document.body.style.fontSize = userPrefs.textSize;
+            document.body.style.fontFamily = userPrefs.typeface;
+            document.querySelector('button').addEventListener('click', userPrefs.resetDefaults);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The text-overflow Property</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            body {
+                font-family: Verdana, sans-serif;
+                font-size: 1.25rem;
+                margin: 1rem;
+                max-width: fit-content;
+            }
+            label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
+            span {
+                border: 1px solid hsl(0, 0%, 30%);
+                display: inline-block;
+                margin-right: 3px;
+                padding: 3px 0 0 5px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                vertical-align: bottom;
+                white-space: nowrap; 
+                width: 15rem;
+            }
+        </style>
+    </head>
+    <body>
+        <label for="name">Please type your name:</label>
+        <div>Welcome, <span id="name" contenteditable="true"></span>!</div>
+    </body>
+</html>

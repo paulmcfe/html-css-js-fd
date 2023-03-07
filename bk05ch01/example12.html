@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Trying out fixed positioning</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            body {
+                font-size: 1.25rem;
+                margin: 2rem;
+                width: 65ch;
+            }
+            header {
+                background-color: hsl(101, 38%, 63%);
+                border: 1px double black;
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 4rem;
+                width: 100%;
+            }
+            .header-image {
+                margin-right: 0.5rem;
+                height: 100%;
+                width: auto;
+            }
+            h1 {
+                margin: .6rem 0;
+            }
+            main {
+                margin-top: 4rem;
+            }
+            .definition {
+                padding-top: .5rem;
+                font-size: 1.25rem;
+            }
+            .main-heading {
+                margin: 1rem 0 0.25rem 0;
+            }
+            section {
+                margin: 1rem 0;
+                padding: 0 0.5rem;
+                border-left: 2px solid darkgrey;
+            }
+            img {
+               float: left;
+            }
+            section > img {
+               margin: 0.5rem 0;
+            }
+            .left-clear {
+                clear: left;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img class="header-image" src="images/holloway3.jpg" alt="Photo of a holloway">
+            <h1>
+                holloway
+            </h1>
+        </header>
+        <main>
+            <div class="definition">
+                <i>n.</i> A sunken footpath or road; a path that is enclosed by high embankments on both sides.
+            </div>
+            <h3 class="main-heading">Notes:</h3>
+            <div>
+                There are two main methods that create holloways: By years (decades, centuries) of constant foot traffic that wears down the path (a process usually accelerated somewhat by water erosion); or by digging out a path between two properties and piling up the dirt on either side.
+            </div>
+            <h3 class="main-heading">Examples:</h3>
+            <section>
+                <div>
+                    Down in the depths of the holloway, you could see neither metalled roads nor telegraph poles, nor even the most distant glimpses of the outsized golf balls of the early warning radar up on Fylingdales.
+                </div>
+                <div>
+                    —William Dalrymple, “Holloway by Robert Macfarlane, Stanley Donwood, Dan Richards – review,” <i>The Guardian</i>, July 19, 2013
+                </div>
+            </section>
+            <section>
+                <div>
+                    Nevertheless, the passage of men and animals over thousands of years has created a very clear series of tracks and holloways (entrenched roads) along this route.
+                </div>
+                <div>
+                    —Paul Hindle, <i>Medieval Roads and Tracks</i>, Shire Archaeology, July 10, 2008
+                </div>
+            </section>
+            <section>
+                <div>
+                    Hollow ways which have survived are our only ancient monuments still in use thousands of years after their creation. Wliile exploring them we tread on the same paths as our remote ancestors, forming a continuous link with prehistoric times.
+                </div>
+                <div>
+                    —Heather Hurley, <i>The Old Roads of South Herefordshire</i>, Finleaf Editions, September 30, 2007
+                </div>
+            </section>
+            <section>
+                <div>
+                    Occasionally, a place or field name may help in assessing the date of a holloway — or at least give an idea of when it was in use and thus indicate that it must be older than that date. Perhaps the best-known name of this type is Holloway in London, a name first recorded in the fifteenth century. In Derbyshire there is, to the south of Matlock, a small hamlet called Holloway, first recorded in the thirteenth century, and there several other similar names around the country. The many ‘Dark Lanes’ could be related to holloways as well.
+                </div>
+                <div>
+                    —Richard Morriss, <i>Roads: Archaeology and Architecture</i>, Tempus, 2005
+                </div>
+            </section>
+            <section>
+                <div>
+                    The ‘hollow way’ was made by each landowner digging out a ditch and throwing up the earth into a continuous bank on his own side. So we get a double ditch which forms in fact a track several feet wide and sunk several feet below the level of the fields on either side, thus:
+                </div>
+                <img src="images/holloway4.jpg" alt="Diagram showing how a holloway can form along a boundary between two estates.">
+                <div class="left-clear">
+                    —W. G. Hoskins, <i>The Making of the English Landscape</i>, Penguin Books, 1955
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

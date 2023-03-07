@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Horizontal Overflow</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            body {
+                margin: 1rem;
+                max-width: fit-content;
+            }
+            h3 {
+                margin-bottom: 0.5rem;
+            }
+            aside {
+                border: 1px solid hsl(0, 0%, 30%);
+                font-size: 1.25rem;
+                height: 175px;
+                line-height: 1.25;
+                overflow: auto;
+                padding: 3px;
+                width: 175px;
+            }
+            .small-title {
+                font-size: 1.1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Shakespeare Quote of the Day:</h3>
+        <aside>
+           I marvel thy master hath not eaten thee for a word;
+        for thou art not so long by the head as
+        honorificabilitudinitatibus: thou art easier
+        swallowed than a flap-dragon.<br>
+        —<i class="small-title">Love’s Labour Lost</i>
+        </aside>
+    </body>
+</html>

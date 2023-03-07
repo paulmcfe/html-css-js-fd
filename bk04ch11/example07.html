@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Getting a radio button state</title>
+        <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }     
+            body {
+                max-width: 25rem;
+                margin: 1rem;
+            }
+            label {
+                display: block;
+                margin: .5rem 0 0 1rem;
+            }            
+            input[type=radio] {
+                margin-right: .5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>
+                    Select a delivery method
+                </legend>
+                <label>
+                    <input type="radio" id="carrier-pigeon" name="delivery" value="pigeon" checked>Carrier pigeon
+                </label>
+                <label>
+                    <input type="radio" id="pony-express" name="delivery" value="pony">Pony express
+                </label>
+                <label>
+                    <input type="radio" id="snail-mail" name="delivery" value="postal">Snail mail
+                </label>
+                <label>
+                    <input type="radio" id="some-punk" name="delivery" value="bikecourier">Some punk on a bike
+                </label>
+            </fieldset>
+        </form>
+        <script>
+            
+            // Display the radio button state for the Pony Express option
+            console.log(`Pony express is ${document.querySelector('#pony-express').checked}`);
+            
+            // Get the selected radio button
+            let deliveryMethod  = document.querySelector('input[name=delivery]:checked').value;
+            console.log(deliveryMethod);
+            
+            // Get the selected radio button's label text
+            let deliveryMethodText = document.querySelector('input[name=delivery]:checked').labels[0].innerText;
+            console.log(deliveryMethodText);
+        </script>
+    </body>
+</html>

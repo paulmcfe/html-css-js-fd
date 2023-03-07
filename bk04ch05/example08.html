@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Replacing a callback with an anonymous function</title>
+    <style>
+        body {
+            margin: 1em;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <button id="bgRed">
+        Make Background Red
+    </button>
+    <button id="bgWhite">
+        Make Background White
+    </button>
+    <script>
+        function makeBackgroundRed() {
+            document.body.style.backgroundColor= "red";
+        }
+    
+        function makeBackgroundWhite() {
+            document.body.style.backgroundColor= "white";
+        }
+        document.getElementById('bgRed').addEventListener(
+            'click', 
+            makeBackgroundRed
+        );
+        document.getElementById('bgWhite').addEventListener(
+            'click', 
+            makeBackgroundWhite
+        );
+    </script>
+</body>
+</html>

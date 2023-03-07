@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Working with function scope</title>
+    <style>
+        body {
+            margin: 1em;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function A() {
+            const myMessage = "I'm in the scope!";
+            console.log("Function A: " + myMessage);
+        }
+        function B() {
+            console.log("Function B: " + myMessage);
+        }
+        A();
+        B();
+    </script>
+</body>
+</html>

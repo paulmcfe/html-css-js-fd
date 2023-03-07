@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Getting the selected list option</title>
+        <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }     
+            body {
+                max-width: 25rem;
+                margin: 1rem;
+            }            
+            label {
+                display: block;
+                margin-top: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Putting On Hairs: Reader Survey</h3>
+        <form>
+            <label for="hair-color">Select your hair color:</label>
+            <select id="hair-color" name="hair-color">
+                <option value="black">Black</option>
+                <option value="blonde">Blonde</option>
+                <option value="brunette" selected>Brunette</option>
+                <option value="red">Red</option>
+                <option value="neon">Something neon</option>
+                <option value="none">None</option>
+            </select>
+    
+            <label for="hair-style">Select your hair style:</label>
+            <select id="hair-style" name="hair-style" size="4">
+                <option value="bouffant">Bouffant</option>
+                <option value="mohawk">Mohawk</option>
+                <option value="page-boy">Page Boy</option>
+                <option value="permed">Permed</option>
+                <option value="shag">Shag</option>
+                <option value="straight" selected>Straight</option>
+                <option value="none">Style? What style?</option>
+            </select>
+
+            <label for="hair-products">Hair products used in the last year:</label>
+            <select id="hair-products" name="hair-products" size="5" multiple>
+                <option value="gel" selected>Gel</option>
+                <option value="grecian-formula" selected>Grecian Formula</option>
+                <option value="mousse">Mousse</option>
+                <option value="peroxide">Peroxide</option>
+                <option value="shoe-black">Shoe black</option>
+            </select>
+        </form>
+        <script>
+            
+            // Get the state of the first item in the #hair-color selection list
+            let isBlack = document.querySelector('#hair-color').options[0].selected;
+            let blackState = isBlack ? 'selected' : 'not selected';            
+            console.log(`The black hair color is ${blackState}`);
+            
+            // Get the option that's selected in the #hair-style list
+            let hairStyle = document.querySelector('#hair-style').selectedOptions[0];
+            console.log(hairStyle.text);
+
+            // Get the selected options in #hair-products list
+            let selectedHairProducts = document.querySelector('#hair-products').selectedOptions;
+            for (let hairProduct of selectedHairProducts) {
+                console.log(hairProduct.text);
+            }
+        </script>
+    </body>
+</html>

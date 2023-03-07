@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Using Recursive Functions</title>
+    <style>
+        body {
+            margin: 1em;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const profitSharingPercent = 0.1;
+        const grossProfit = 100000;
+        let netProfit;
+        
+        // Here's the initial guess
+        let profitSharing = grossProfit * profitSharingPercent;
+        
+        calculateProfitSharing(profitSharing);
+        
+        function calculateProfitSharing(guess) {
+        
+            // First, calculate the new net profit
+            netProfit = grossProfit - guess;
+        
+            // Now use that to guess the profit-sharing value again
+            profitSharing = Math.ceil(netProfit * profitSharingPercent);
+            
+            // Do we have a solution?
+            if ((netProfit + profitSharing) != grossProfit) {
+                // If not, plug it in again
+                calculateProfitSharing(profitSharing);
+            }
+        }
+        // Write the solution
+        document.write("Gross Profit: " + grossProfit + 
+            "<br>Net Profit: " + netProfit + 
+            "<br>Profit Sharing: " + profitSharing);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Example 8: The &lt;source&gt; Tag for Audio</title>
+    </head>
+    <style>
+        body {
+            margin: 1em;
+            font-size: 1.25em;
+        }
+    </style>
+    <body>
+        <audio
+            autoplay
+            controls
+            loop
+            <source src="audio/jabberwocky.mp3"
+                    type="audio/mp3">
+            <source src="audio/jabberwocky.m4a"
+                    type="audio/mp4">
+            <source src="audio/jabberwocky.webm"
+                    type="audio/webm">
+            <source src="audio/jabberwocky.ogg"
+                    type="audio/ogg">
+            <source src="audio/jabberwocky.wav"
+                    type="audio/wav">
+        </audio>
+    </body>
+</html>

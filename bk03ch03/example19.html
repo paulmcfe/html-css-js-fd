@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The :read-only Pseudo-Class</title>
+        <style>
+            body {
+                margin: 32px;
+                width: fit-content;
+            }
+            div, textarea {
+                font-size: 20px;
+                padding: 4px;
+            }
+            textarea:read-only {
+                border: 0;
+                resize: none;
+                height: 100px;
+                width: fit-content;
+                white-space: pre-line;
+            }
+        </style>
+    </head>
+    <body>
+        <div>Our address:</div>
+        <textarea readonly>
+            123 Pseudo-Class Court
+            Pasadena, CA
+            90210
+        </textarea>
+    </body>
+</html>

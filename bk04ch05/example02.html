@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Calling a function after the page is loaded</title>
+    <script>
+        function makeBackgroundRed() {
+            document.body.style.backgroundColor = "red";
+            console.log("The background is now red.");
+        }
+    </script>
+</head>
+<body>
+    <!-- Other body elements go here -->
+
+    <script>
+        makeBackgroundRed();
+    </script>
+</body>
+</html>

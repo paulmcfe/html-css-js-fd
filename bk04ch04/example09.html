@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Using for Loops</title>
+        <script>
+            let sum = 0;
+            for (let counter = 1; counter < 4; counter += 1) {
+                let num;
+                let ordinal;
+                switch (counter) {
+                    case 1:
+                        ordinal = "first";
+                        break;
+                    case 2:
+                        ordinal = "second";
+                        break;
+                    case 3:
+                        ordinal = "third";
+                }
+                num = prompt("Enter the " + ordinal + " number:", 1);
+                sum += Number(num);
+            }
+            document.write("The average is " + sum / 3);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

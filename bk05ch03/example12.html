@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Assigning grid items using line numbers</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            html {
+                height: 100%;
+            }
+            body {
+                height: 100%;
+            }
+            .container {
+                border: 5px double black;
+                display: grid;
+                grid-template-columns: 15vw repeat(3, 1fr) 20vw;
+                grid-template-rows: 15vh 1fr 1fr;
+                height: 100%;
+            }
+            .item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: Verdana, sans-serif;
+                font-size: 3rem;
+            }
+            .item1 {
+                background-color: hsl(0, 0%, 94%);
+                grid-column-start: 1;
+                grid-row-start: 1;
+            }
+            .item2 {
+                background-color: hsl(0, 0%, 88%);
+                grid-column-start: 2;
+                grid-column-end: span 4;
+                grid-row-start: 1;
+            }
+            .item3 {
+                background-color: hsl(0, 0%, 82%);
+                grid-column-start: 1;
+                grid-row-start: 2;
+                grid-row-end: -1;  
+            }
+            .item4 {
+                background-color: hsl(0, 0%, 76%);
+                grid-column-start: 2;
+                grid-column-end: 5;
+                grid-row-start: 2;
+                grid-row-end: -1;  
+            }
+            .item5 {
+                background-color: hsl(0, 0%, 70%);
+                grid-column-start: 5;
+                grid-row-start: 2;
+            }
+            .item6 {
+                background-color: hsl(0, 0%, 64%);
+                grid-column-start: 5;
+                grid-row-start: 3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+            <div class="item item6">6</div>
+        </div>
+    </body>
+</html>

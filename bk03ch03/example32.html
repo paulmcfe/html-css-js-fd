@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The :has() Functional Pseudo-Class</title>
+        <style>
+            body {
+                max-width: 500px;
+                margin: 20px;
+            }
+            h1, h2, h3, h4 {
+                margin: 12px 16px;
+            }
+            nav, p {
+                margin: 8px 16px;
+            }
+            /* Match a parent that has a child in this list. */
+            nav:has(> a) {
+                background: lightgrey;
+                border: 4px double darkgrey;
+            }
+            /* Match an ancestor that has a descendant in this list */
+            section:has(p) {
+                border: 1px solid darkgrey;
+                margin-bottom: 8px;
+            }
+            /* Match a sibling that has a next sibling in this list */
+            h4:has(+ nav) {
+                font-style: italic;
+                margin-left: 16px;
+            }
+            /* Match a sibling that has a later sibling in this list */
+            h2:has(~ h3) {
+                font-variant-caps: small-caps;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Organizing Your Web Page Text</h1>
+        <p>Suggestions and best practices for optimizing narrative flow.</p>
+        <h4>Contents:</h4>
+        <nav>
+            <a href="#benefits">Benefits</a><br>
+            <a href="#workflow">Workflow</a><br>
+            <a href="#best-practices">Best Practices</a>
+        </nav>
+        <article>
+            <section>
+                <h2 id="benefits">Introduction</h2>
+                <p>
+                    All great documents have something in common: excellent organization. Content and formatting are important, but their effectiveness is diminished or even nullified if the document has a slipshod organization. However, even a page with only so-so content and negligible formatting can get its point across if it's organized coherently and sensibly.
+                </p>
+            </section>
+            <section>
+                <h2 id="benefits">Benefits</h2>
+                <p>
+                    There are many reasons to organize your web page text, but three are the most important: narrative flow, accessibility, and search engine optimization.
+                </p>
+                <h3>Narrative Flow</h3>
+                <p>
+                    Research has shown — and poets and storytellers have known for thousands of years — that humans have an innate hunger for story. We learn better and take in data more effectively when it's organized as a narrative.
+                </p>
+                <h3>Accessibility</h3>
+                <p>
+                    Visually impaired visitors to your web page will often use special screen readers to read aloud the page contents. These tools are designed to look for and read web page headings so the user can quickly get an overall sense of the page structure.
+                </p>
+                <h3>Search Engine Optimization</h3>
+                <p>
+                    Most search engines include page headings as part of their algorithms for determining where a page should rank in the results. In general, text that resides higher up in the page hierarchy is given more importance in the search results.
+                </p>
+            </section>
+            <h2 id="workflow">Workflow</h2>
+            <h2 id="best-practices">Best Practices</h2>
+        </article>
+    </body>
+</html>

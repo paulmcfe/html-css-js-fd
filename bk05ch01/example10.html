@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Relative positioning</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            body {
+                font-size: 1.25rem;
+                margin: 2rem;
+                width: 25rem;
+            }
+            div {
+                margin-bottom: 1rem;
+            }
+            img {
+                height: auto;
+                width: 200px;
+            }
+            .offset-image {
+                position: relative;
+                left: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            holloway
+        </h1>
+        <div>
+            <i>n.</i> A sunken footpath or road; a path that is enclosed by high embankments on both sides.
+        </div>
+        <img src="images/holloway1.jpg" alt="Photo of a hollway">
+        <img src="images/holloway2.jpg" alt="Photo of a hollway" class="offset-image">
+        <img src="images/holloway3.jpg" alt="Photo of a hollway">
+    </body>
+</html>

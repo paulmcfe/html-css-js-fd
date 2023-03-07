@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Adding Data to Web Storage</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            // Declare a JavaScript object
+            const userData = {
+                bgColor: "darkolivegreen",
+                textColor: "antiquewhite",
+                textSize: "1.25em",
+                typefaces: ["Georgia", "Verdana", "serif"],
+                subscriber: true,
+                subscriptionType: 3
+            }
+            
+            // Store it
+            localStorage.setItem('user-data', JSON.stringify(userData));
+        </script>
+    </body>
+</html>

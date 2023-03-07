@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Variable Fonts</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Montserrat', sans-serif;
+                margin: 1rem;
+            }
+            .container {
+                display: flex;
+            }
+            #variable-font {
+                padding: 1rem;
+                font-size: max(5rem, 12vw);
+                font-weight: 400;
+            }
+            form {
+                font-size: 1.25rem;
+                margin: 0 2rem;
+            }
+            fieldset {
+                padding: 1rem;
+                width: fit-content;
+            }
+            input[type="checkbox"] + label {
+                margin-left: 0.5rem;   
+            }
+        </style>
+    </head>
+    <body>
+        <div id="variable-font">
+            Variable font!
+        </div>
+        <form>
+            <fieldset>
+                <legend>Vary that font!</legend>
+                <label for="weight-range">Weight:</label> (<span id="weight-output"></span>)<br>
+                <input id="weight-range" type="range" min="100" max="900" value="400">
+                <p>
+                <input id="italic-input" type="checkbox">
+                <label for="italic-input"> Italic</label>
+            </fieldset>
+        </form>
+        
+        <script>
+            // Get the form controls
+            const range = document.querySelector('#weight-range');
+            const output = document.querySelector('#weight-output');
+            const italicToggle = document.querySelector('#italic-input');
+            
+            // Display the initial weight value
+            output.innerHTML = range.value;
+            
+            // Make sure the checkbox is deselected
+            italicToggle.checked = false;
+            
+            // Listen for changes on the range input
+            range.addEventListener('input', (event) => {
+                
+                // Get the div
+                const divVF = document.querySelector('#variable-font');
+                
+                // Set font-weight to the new value
+                divVF.style.fontWeight = event.target.value;
+                
+                // Update the displayed value
+                output.innerHTML = event.target.value
+            });
+            
+            // Listen for clicks on the checkbox
+            italicToggle.addEventListener('click', (event) => {
+                
+                // Get the div
+                const divVF = document.querySelector('#variable-font');
+                
+                // Toggle the font-style property value between 'italic' and 'normal'
+                event.target.checked ? divVF.style.fontStyle = 'italic' : divVF.style.fontStyle = 'normal';
+            });
+        </script>
+    </body>
+</html>

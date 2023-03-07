@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Calling a function when the &lt;script&gt; tag is parsed</title>
+    <script>
+        function displayGreeting() {
+            const currentHour = new Date().getHours();
+            if (currentHour < 12) {
+                console.log("Good morning!");
+            } else {
+                console.log("Good day!");
+            }
+        }
+        displayGreeting();
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Testing whether all elements pass a test: every()</title>
+    </head>
+    <body>
+        <script>
+            // Declare an array of interest rates
+            const rates = [0.02, 0.025, 0.03, 0.035, 0.04, 0.045, 0.5];
+            
+            // Test each rate
+            const legitRates = rates.every(currentValue => {
+                return currentValue >= 0.01 && currentValue <= 0.1;
+            });
+            
+            // Output the result
+            console.log(legitRates);
+        </script>
+    </body>
+</html>

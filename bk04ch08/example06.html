@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The substr() method</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+            div {
+                margin-top: .5em;
+            }
+        </style>
+    </head>
+    <body>
+        <pre>
+HTML, CSS, and JavaScript For Dummies
+0123456789012345678901234567890123456
+        </pre>
+        <div id="output">
+        </div>
+
+        <script>
+            const bookName = "HTML, CSS, and JavaScript For Dummies";
+            
+            let str = "substr(0, 9) = " + bookName.substr(0, 9)+"<br>";
+            str += "substr(15, 10) = " + bookName.substr(15, 10) + "<br>";
+            str += "substr(26) = " + bookName.substr(26);
+            
+            document.getElementById("output").innerHTML = str;
+        </script>
+    </body>
+</html>

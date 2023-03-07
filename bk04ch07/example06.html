@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Testing whether some elements pass a test: some()</title>
+    </head>
+    <body>
+        <script>
+            // Declare an array of divisors
+            const divisors = [27, 53, 6, 0, 17, 88, 32];
+            
+            // Test each divisor
+            const zeroDivisors = divisors.some(currentValue => {
+                return currentValue === 0;
+            });
+            
+            // Output the result
+            console.log(zeroDivisors);
+        </script>
+    </body>
+</html>

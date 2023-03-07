@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The :nth-child() Pseudo-Class</title>
+        <style>
+            body {
+                width: 400px;
+            }
+            p, table {
+                margin: 16px;
+            }
+            th, td {
+                padding: 3px;
+                text-align: left;
+            }
+            table {
+                border-spacing: 0;
+            }
+            tr:nth-child(even) {
+                background-color: lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            Table 1.1 lists five countries that have a goat population that’s larger than their
+            human population.
+        </p>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Country</th>
+                    <th>Goats</th>
+                    <th>People</th>
+                </tr>
+                <tr>
+                    <td>Somalia</td>
+                    <td>20,500,000</td>
+                    <td>2,300,000</td>
+                </tr>
+                <tr>
+                    <td>Mongolia</td>
+                    <td>5,126,000</td>
+                    <td>2,300,000</td>
+                </tr>
+                <tr>
+                    <td>Mauritania</td>
+                    <td>3,310,000</td>
+                    <td>2,100,000</td>
+                </tr>
+                <tr>
+                    <td>Namibia</td>
+                    <td>1,500,000</td>
+                    <td>1,400,000</td>
+                </tr>
+                <tr>
+                    <td>Djibouti</td>
+                    <td>504,000</td>
+                    <td>400,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

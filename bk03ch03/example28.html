@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The :target Pseudo-Class</title>
+        <style>
+            body {
+                max-width: 500px;
+                margin: 20px;
+            }
+            h1, h2, h3, h4, nav, p, a {
+                margin: 8px 0 0 8px;
+            }
+            h4, a {
+                margin-left: 0;
+            }
+            :target {
+                background-color: yellow;
+            }
+            :target::before{
+                content: '⇒';
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Organizing Your Web Page Text</h1>
+        <nav>
+            <h4>Contents:</h4>
+            <a href="#benefits">Benefits</a><br>
+            <a href="#workflow">Workflow</a><br>
+            <a href="#best-practices">Best Practices</a>
+        </nav>
+        <p>
+            All great documents have something in common: excellent organization. Content and formatting are important, but their effectiveness is diminished or even nullified if the document has a slipshod organization. However, even a page with only so-so content and negligible formatting can get its point across if it's organized coherently and sensibly.
+        </p>
+        <h2 id="benefits">Benefits</h2>
+        <p>
+            There are many reasons to organize your web page text, but three are the most important: narrative flow, accessibility, and search engine optimization.
+        </p>
+        <h3>Narrative Flow</h3>
+        <p>
+            Research has shown — and poets and storytellers have known for thousands of years — that humans have an innate hunger for story. We learn better and take in data more effectively when it's organized as a narrative.
+        </p>
+        <h3>Accessibility</h3>
+        <p>
+            Visually impaired visitors to your web page will often use special screen readers to read aloud the page contents. These tools are designed to look for and read web page headings so the user can quickly get an overall sense of the page structure.
+        </p>
+        <h3>Search Engine Optimization</h3>
+        <p>
+            Most search engines include page headings as part of their algorithms for determining where a page should rank in the results. In general, text that resides higher up in the page hierarchy is given more importance in the search results.
+        </p>
+        <h2 id="workflow">Workflow</h2>
+        <h2 id="best-practices">Best Practices</h2>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The :disabled Pseudo-Class</title>
+        <style>
+            body {
+                margin: 32px;
+                width: fit-content;
+            }
+            div,
+            button{
+                margin-top: .5rem;
+            }
+            label + input[type="text"] {
+                display: block;
+            }
+            button {
+                padding: .25rem;
+                border-radius: 5px;
+                font-size: .8rem;
+            }
+            button:disabled {
+                cursor: not-allowed;
+                opacity: .5; 
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <div>
+                <label for="fave-beatle">
+                    Favorite Beatle:
+                </label>
+                <input id="fave-beatle" type="text" required>
+                <div>
+                    <input type="checkbox" name="terms" id="cb-terms">
+                    <label for="cb-terms">
+                        I have pretended to read the Terms and Conditions
+                    </label>
+                </div>
+                <button type="submit" disabled>Submit</button>
+            </div>
+        </form>
+        <script>
+            // Listen for the checkbox being toggled on or off
+            document.querySelector('#cb-terms').addEventListener('change', function() {
+                // Toggle the button's disabled attributed based on the checkbox state
+                document.querySelector('button').disabled = !this.checked;
+            });
+        </script>
+    </body>
+</html>

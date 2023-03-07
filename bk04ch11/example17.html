@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Submitting the form data</title>
+        <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }     
+            body {
+                max-width: 25rem;
+                margin: 1rem;
+            }            
+            label {
+                display: block;
+                margin-top: 1rem;
+            }
+            button {
+                background: rgb(22, 37, 24);
+                border-radius: 10px;
+                color: white;
+                display: block;
+                font-size: .8rem;
+                margin-top: .75rem;
+                padding: 7px 10px 8px 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>
+                    Settings
+                </legend>
+                <label for="background-color">Select a background color</label>
+                <input id="background-color" type="color" name="bg-color" value="#ffffff">
+                <label for="text-color">Select a text color</label>
+                <input id="text-color" type="color" name="text-color" value="#000000">
+                <label for="font-stack">Select a typeface:</label>
+                <select id="font-stack" name="font-stack">
+                    <option value="Georgia, 'Times New Roman', serif" selected>Serif</option>
+                    <option value="Verdana, Tahoma, sans-serif">Sans-serif</option>
+                    <option value="'Bradley Hand', Brush Script MT, cursive">Cursive</option>
+                    <option value="Luminari">Fantasy</option>
+                    <option value="Monaco, Courier, monospace">Monospace</option>
+                </select>
+                <button>
+                    Save Your Settings
+                </button>
+            </fieldset>
+        </form>
+        <script>
+            // Listen for changes on the #background-color color picker
+            document.querySelector('#background-color').addEventListener('change', function() {
+                let backgroundColor = this.value;
+                document.body.style.backgroundColor = backgroundColor;
+            });
+            
+            // Listen for changes on the #text-color color picker
+            document.querySelector('#text-color').addEventListener('change', function() {
+                let textColor = this.value;
+                document.body.style.color = textColor;
+            });
+            
+            // Listen for changes on the #font-stack selection list
+            document.querySelector('#font-stack').addEventListener('change', function() {
+                let fontStack = this.selectedOptions[0].value;
+                document.body.style.fontFamily = fontStack;                        
+            });
+            
+            // Listen for the button being clicked
+            document.querySelector('button').addEventListener('click', () => {
+            
+                // Store the form data in a JavaScript object
+                let userSettings = {
+                    backgroundColor: document.querySelector('#background-color').value,
+                    textColor: document.querySelector('#text-color').value,
+                    fontStack: document.querySelector('#font-stack').selectedOptions[0].value
+                }
+            
+                // Save the settings in local storage
+                localStorage.setItem('user-settings', JSON.stringify(userSettings));
+             });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The Attribute Is First Selector (|=)</title>
+        <style>
+            body {
+                width: fit-content;
+            }
+            div{
+                margin: 16px;
+            }
+            div[lang|="en"] {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div lang="en-au">Hello Australia World!</div>
+        <div lang="fr">Bonjour France Monde!</div>
+        <div lang="en-gb">Hello Great Britain World!</div>
+        <div lang="en-nz">Hello New Zealand World!</div>
+        <div lang="pt">Olá Mundo Português!</div>
+        <div lang="es">Hola España Mundo!</div>
+        <div lang="en-us">Hello USA World!</div>
+    </body>
+</html>

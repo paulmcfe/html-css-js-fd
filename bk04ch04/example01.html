@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Making True/False Decisions with if Statements</title>
+    </head>
+    <body>
+        <script>
+            // Initialize the total sales and expenses
+            const totalSales = Number(prompt("Please enter the total sales.", 10000));
+            const totalExpenses = Number(prompt("Please enter the total expenses.", 5000));
+            
+            if (totalSales != 0) {
+                const grossMargin = (totalSales - totalExpenses) / totalSales;
+                
+                // Write the result to the page
+                document.write("The gross margin is " + (grossMargin * 100) + "%");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The charAt() method</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+            div {
+                margin-top: .5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="output">
+        </div>
+
+        <script>
+            // Set up an array of test strings
+            const stringArray = [];
+            stringArray[0] = "Not this one.";
+            stringArray[1] = "Not this one, either.";
+            stringArray[2] = "1. Step one.";
+            stringArray[3] = "Shouldn't get this far.";
+            
+            // Loop through the array
+            for (const currentString of stringArray) {
+                
+                // Get the first character of the string
+                const firstChar = currentString.charAt(0);
+                
+                // Is it a number?
+                if (!isNaN(firstChar)) {
+                    
+                    // If so, display the string because that's the one we want
+                    document.getElementById("output").innerHTML = `Here's the one: "${currentString}"`;
+                
+                   // We're done here, so break out of the loop
+                   break;
+                }
+            }
+        </script>
+    </body>
+</html>

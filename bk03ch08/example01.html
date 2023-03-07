@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Custom Properties: Before</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            body {
+                margin: 1rem;
+                max-width: fit-content;
+            }
+            main {
+                border: 5px outset hsl(6deg, 100%, 94%);
+                padding: 1rem;
+                text-align: center;
+            }
+            h2 {
+                text-shadow: 5px 5px hsl(6deg, 100%, 94%);
+                margin-top: 1rem;
+            }
+            button {
+                background-color: hsl(6deg, 100%, 94%);
+                box-shadow:  5px 5px hsl(6deg, 100%, 94%);
+                border-radius: 10px;
+                font-size: 1.5rem;
+                margin-top: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h2>Weird Word Origins</h2>
+            <button>Click Me!</button>
+        </main>
+    </body>
+</html>

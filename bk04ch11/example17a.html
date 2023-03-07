@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Submitting the form data</title>
+        <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }     
+            body {
+                max-width: 25rem;
+                margin: 1rem;
+            }            
+            label {
+                display: block;
+                margin-top: 1rem;
+            }
+            button {
+                background: rgb(22, 37, 24);
+                border-radius: 10px;
+                color: white;
+                display: block;
+                font-size: .8rem;
+                margin-top: .75rem;
+                padding: 7px 10px 8px 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>
+                    Settings
+                </legend>
+                <label for="background-color">Select a background color</label>
+                <input id="background-color" type="color" name="bg-color" value="#ffffff">
+                <label for="text-color">Select a text color</label>
+                <input id="text-color" type="color" name="text-color" value="#000000">
+                <label for="font-stack">Select a typeface:</label>
+                <select id="font-stack" name="font-stack">
+                    <option value="Georgia, 'Times New Roman', serif" selected>Serif</option>
+                    <option value="Verdana, Tahoma, sans-serif">Sans-serif</option>
+                    <option value="'Bradley Hand', Brush Script MT, cursive">Cursive</option>
+                    <option value="Luminari">Fantasy</option>
+                    <option value="Monaco, Courier, monospace">Monospace</option>
+                </select>
+                <button>
+                    Save Your Settings
+                </button>
+            </fieldset>
+        </form>
+    </body>
+</html>

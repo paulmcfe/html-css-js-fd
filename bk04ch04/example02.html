@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Branching with if...else Statements</title>
+    </head>
+    <body>
+        <script>
+            // Initialize the current month and regular price
+            const currMonth = prompt("Type the full name of the current month:", "January");
+            const regularPrice = Number(prompt("Please enter the item price:", 9.95));
+            
+            let discountRate;
+            if (currMonth === "December") {
+                discountRate = 0.2;
+            } else {
+                discountRate = 0.1;
+            }
+            const discountedPrice = regularPrice * (1 - discountRate);
+
+            // Write the result to the page
+            document.write("The discounted price is $" + discountedPrice);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The :hover Pseudo-Class</title>
+        <style>
+            body {
+                margin: 32px;
+                width: fit-content;
+            }
+            button {
+                background-color: purple;
+                background-image: linear-gradient(to bottom, hsl(0, 68%, 50%) 0%, hsl(0, 68%, 30%) 100%);
+                border-color: hsl(0, 0%, 0%);
+                border-radius: 10px;
+                border-style: solid;
+                border-width: 0px;
+                color: hsl(0, 0%, 100%);
+                font-family: Verdana, sans-serif;
+                font-size: 1.25rem;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: normal;
+                letter-spacing: 1.5px;
+                padding-bottom: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 7px;
+            }
+            button:hover {
+                box-shadow: 10px 5px 5px grey;
+            }
+        </style>
+    </head>
+    <body>
+        <button>Hover Over Me</button>
+    </body>
+</html>

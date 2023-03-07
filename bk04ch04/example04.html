@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Nesting multiple if statements</title>
+    </head>
+    <body>
+        <script>
+            // Get the current hour (see Book 4, Chapter 8)
+            const timeNow = new Date();
+            const currentHour = timeNow.getHours();
+ 
+            let greeting;
+            if (currentHour < 12) {
+                greeting = "Good morning!";
+            } else if (currentHour < 18) {
+                greeting = "Good afternoon!";
+            } else {
+                greeting = "Good evening!";
+            }
+
+            // Write the result to the page
+            document.write(greeting);
+
+        </script>
+    </body>
+</html>

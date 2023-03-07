@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Converting getDate() into a day name - function technique</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+            div {
+                margin-top: .5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="output">
+        </div>
+
+        <script>
+            const monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+            
+            const dayNames = ["Sunday","Monday","Tuesday",
+            "Wednesday","Thursday","Friday","Saturday"];
+            
+            // Set the year, month, and day
+            const userYear = 2023;
+            const userMonth = 11;
+            const userDay = 31;
+            
+            // Make a date object then use the data to change the date
+            const userDate = new Date();
+            userDate.setFullYear(userYear);
+            userDate.setMonth(userMonth);
+            userDate.setDate(userDay);
+            
+            // Convert the numbers into names
+            const dayName = dayNames[userDate.getDay()];
+            const monthName = monthNames[userDate.getMonth()];
+            
+            // Display the message
+            document.getElementById("output").innerHTML = `The date 
+                entered was: ${monthName} ${userDay}, ${userYear} 
+                <br>The day of the week is: ${dayName}`;
+        </script>
+    </body>
+</html>

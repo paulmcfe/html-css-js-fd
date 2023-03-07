@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The background-clip Property</title>
+        <style>
+            body {
+                margin: 2rem;
+                font-size: 100%;
+            }
+            div {
+                background-image: url("images/ant-on-a-flower.jpg");
+                background-size: cover;
+                border: 15px dashed black;
+                height: 25vh;
+                margin-block: 2rem;
+                padding: 1rem;
+                position: relative;
+                width: 30vw;
+            }
+            .content-box {
+                background-clip: content-box;
+            }
+            .content-box::before {
+                content: "background-clip: content-box";
+                font-family: "Courier New", monospace;
+                position: absolute;
+                left: -15px;
+                top: -45px;
+            }
+            .padding-box {
+                background-clip: padding-box;
+            }
+            .padding-box::before {
+                content: "background-clip: padding-box";
+                font-family: "Courier New", monospace;
+                position: absolute;
+                left: -15px;
+                top: -45px;
+            }
+            .border-box {
+                background-clip: border-box;
+            }
+            .border-box::before {
+                content: "background-clip: border-box";
+                font-family: "Courier New", monospace;
+                position: absolute;
+                left: -15px;
+                top: -45px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content-box">            
+        </div>
+        <div class="padding-box">            
+        </div>
+        <div class="border-box">            
+        </div>
+    </body>
+</html>

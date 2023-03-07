@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The font-variant-numeric Property</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap" rel="stylesheet">
+        <style>
+            body {
+                margin: 2rem;
+            }
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                width: 90vw;
+            }
+            div {
+                font-family: "Source Sans Pro", "Trebuchet MS", sans-serif;
+                font-size: 2vw;
+            }
+            code {
+                font-family: "Courier New", monospace;
+            }
+            .column-heading {
+                border-top: solid;
+                border-bottom: double;
+                font-weight: 700;
+                padding: 3px 0;
+            }
+            .ordinal {
+                font-variant-numeric: ordinal;
+            }
+            .slashed-zero {
+                font-variant-numeric: slashed-zero;
+            }
+            .lining-nums {
+                font-variant-numeric: lining-nums;
+            }
+            .oldstyle-nums {
+                font-variant-numeric: oldstyle-nums;
+            }
+            .proportional-nums {
+                font-variant-numeric: proportional-nums;
+            }
+            .tabular-nums {
+                font-variant-numeric: tabular-nums;
+            }
+            .diagonal-fractions {
+                font-variant-numeric: diagonal-fractions;
+            }
+            .stacked-fractions {
+                font-variant-numeric: stacked-fractions;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>The <code>font-variant-numeric</code> keywords</h1>
+        <div class="container">
+            <div class="column-heading">Keyword</div><div class="column-heading">Regular Text</div><div class="column-heading">Styled Text</div>
+            <div><code>ordinal</code></div><div>1st, 2nd, 3rd, 4th</div><div><span class="ordinal">1st, 2nd, 3rd, 4th</span></div>
+            <div><code>slashed-zero</code></div><div>1,024</div><div><span class="slashed-zero">1,024</span></div>
+            <div><code>lining-nums</code></div><div>1234567890</div><div><span class="lining-nums">1234567890</span></div>
+            <div><code>oldstyle-nums</code></div><div>1234567890</div><div><span class="oldstyle-nums">1234567890</span></div>
+            <div><code>proportional-nums</code></div><div>1234567890</div><div><span class="proportional-nums">1234567890</span></div>
+            <div><code>tabular-nums</code></div><div>1234567890</div><div><span class="tabular-nums">1234567890</span></div>
+            <div><code>diagonal-fractions</code></div><div>1/2 3/4 5/6 7/8 9/10</div><div><span class="diagonal-fractions">1/2 3/4 5/6 7/8 9/10</span></div>
+            <div><code>stacked-fractions</code></div><div>1/2 3/4 5/6 7/8 9/10</div><div><span class="stacked-fractions">1/2 3/4 5/6 7/8 9/10</span></div>
+        </div>
+    </body>
+</html>

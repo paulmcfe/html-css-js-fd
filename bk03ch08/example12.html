@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Hiding Stuff with display:none</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            body {
+                display: flex;
+            }
+            div {
+                background-image: linear-gradient(to bottom, hsl(60deg 100% 50%) 0%, hsl(36deg 100% 50%) 100%);
+                border-radius: 10px;
+                font-size: 1.25rem;
+                padding: 1rem;
+                margin: 1rem;
+                text-align: center;
+            }
+            .hide-me {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            First
+        </div>
+        <div>
+            Second
+        </div>
+        <div class="hide-me">
+            Third
+        </div>
+        <div>
+            Fourth
+        </div>
+    </body>
+</html>

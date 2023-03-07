@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Using for Loops</title>
+        <style>
+            body {
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            for (let rank = 3; rank >= 1; rank -= 1) {
+                let ordinal;
+                let color;
+                switch (rank) {
+                    case 1:
+                        ordinal = "first";
+                        break;
+                    case 2:
+                        ordinal = "second";
+                        break;
+                    case 3:
+                        ordinal = "third";
+                }
+                color = prompt("What is your " + ordinal + "-favorite CSS color?", "");
+                document.write(rank + ". " + color + "<br>");
+            }
+        </script>
+    </body>
+</html>

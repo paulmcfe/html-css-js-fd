@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The :out-of-range Pseudo-Class</title>
+        <style>
+            body {
+                margin: 32px;
+                width: fit-content;
+            }
+            div {
+                font-size: 1.25rem;
+                margin: .5rem 0 .5rem 0;
+            }
+            label {
+                display: block;
+            }
+            input {
+                font-size: 1rem;
+                width: 2.5rem;
+            }
+            input:in-range {
+                background-color: lightgreen;
+            }
+            input:in-range + span::after {
+                content: 'That’s a valid number. Good.';
+            }
+            input:out-of-range {
+                background-color: orange;
+            }
+            input:out-of-range + span::after {
+                content: 'Whoops, that’s not a valid number! Please enter a value from 3 to 25.';
+            }
+            button {
+                padding: .5rem;
+                border-radius: 5px;
+                font-size: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <div>
+                <label for="loan-term">Loan term (3-25 years):</label>
+                <input id="loan-term" 
+                       type="number"
+                       min="3"
+                       max="25"
+                       value="3">
+                <span></span>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <script>
+            // Listen for the checkbox being toggled on or off
+            document.querySelector('#cb-terms').addEventListener('change', function() {
+                // Toggle the button's disabled attributed based on the checkbox state
+                document.querySelector('button').disabled = !this.checked;
+            });
+        </script>
+    </body>
+</html>

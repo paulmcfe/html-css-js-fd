@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The Attribute Includes Selector (~=)</title>
+        <style>
+            body {
+                width: fit-content;
+            }
+            img {
+                width: 200px;
+                height: auto;
+                margin: 16px;
+            }
+            img[alt~="photo"] {
+                border: 12px ridge saddlebrown;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="images/image24-thumbnail.jpg" alt="A photo showing the typical English humour">
+        <img src="images/image27-thumbnail.jpg" alt="While in Montreal, I took this photo of a boy among statues">
+        <img src="images/image35-thumbnail.jpg" alt="A photograph of some local graffiti">
+    </body>
+</html>

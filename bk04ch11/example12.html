@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Setting the focus</title>
+        <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }     
+            body {
+                max-width: 25rem;
+                margin: 1rem;
+            }            
+            label {
+                display: block;
+                margin-top: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <label for="user">Username:</label>
+            <input id="user" type="text" name="username">
+            <label for="pwd">Password:</label>
+            <input id="pwd" type="password" name="password">
+        </form>
+        <script>
+            document.querySelector('#user').focus();
+        </script>
+    </body>
+</html>

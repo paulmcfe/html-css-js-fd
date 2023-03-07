@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The :nth-last-of-type() Pseudo-Class</title>
+        <style>
+            body {
+                margin: 32px;
+                width: fit-content;
+            }
+            li:nth-last-of-type(7) {
+                font-style: italic;   /* #4 */
+            }
+            li:nth-last-of-type(3n) {
+                color: red;          /* #8, #5, #2 */
+            }
+            li:nth-last-of-type(3n+2) {
+                font-weight: bold;   /* #9, #6, #3 */
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Top Ten U.S. College Nicknames</h3>
+        <ol>
+            <li>U.C. Santa Cruz Banana Slugs</li>
+            <div>Conference: Independent (Division III)</div>
+            <li>Delta State Fighting Okra</li>
+            <div>Conference: Gulf South (Division II)</div>
+            <li>Kent State Golden Flashes</li>
+            <div>Conference: Mid-American (Division I)</div>
+            <li>Evergreen State College Geoducks</li>
+            <div>Conference: Cascade Collegiate (NAIA}</div>
+            <li>New Mexico Tech Pygmies</li>
+            <div>Conference: Unknown </div>
+            <li>South Carolina Fighting Gamecocks</li>
+            <div>Conference: Southeastern (Division I)</div>
+            <li>Southern Illinois Salukis</li>
+            <div>Conference: Missouri Valley (Division I)</div>
+            <li>Whittier Poets</li>
+            <div>Conference: Southern California Intercollegiate Athletic (Division III)</div>
+            <li>Western Illinois Leathernecks</li>
+            <div>Conference: Missouri Valley (Division I)</div>
+            <li>Delaware Fightin’ Blue Hens</li>
+            <div>Conference: Colonial Athletic (Division I)</div>
+        </ol>
+    </body>
+</html>

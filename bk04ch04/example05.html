@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Using the switch statement</title>
+    </head>
+    <body>
+        <script>
+            // Get the month name
+            const monthName = prompt("Please enter the month name:", "January");
+ 
+            let daysInMonth;
+            switch(monthName) {
+                case "January":
+                    daysInMonth = 31;
+                    break;
+                case "February":
+                    const yearValue = Number(prompt("Please enter the year:", 2023));
+                    if (yearValue % 4 === 0) {
+                        daysInMonth = 29;
+                    }
+                    else {
+                        daysInMonth = 28;
+                    }
+                    break;
+                case "March":
+                    daysInMonth = 31;
+                    break;
+                case "April":
+                    daysInMonth = 30;
+                    break;
+                case "May":
+                    daysInMonth = 31;
+                    break;
+                case "June":
+                    daysInMonth = 30;
+                    break;
+                case "July":
+                    daysInMonth = 31;
+                    break;
+                case "August":
+                    daysInMonth = 31;
+                    break;
+                case "September":
+                    daysInMonth = 30;
+                    break;
+                case "October":
+                    daysInMonth = 31;
+                    break;
+                case "November":
+                    daysInMonth = 30;
+                    break;
+                case "December":
+                    daysInMonth = 31;
+                    break;
+                default:
+                   daysInMonth = 0;
+            }
+
+            // Write the result to the page
+            if (daysInMonth !== 0) {
+                document.write("The month of " + monthName + " has " + daysInMonth + " days.");
+            }
+        </script>
+    </body>
+</html>

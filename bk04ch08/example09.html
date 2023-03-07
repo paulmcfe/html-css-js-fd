@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Converting getMonth() into a month name - array technique</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+            div {
+                margin-top: .5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="output">
+        </div>
+
+        <script>
+            const monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+            const dateNow = new Date();
+            const monthNow = dateNow.getMonth();
+            document.getElementById("output").innerHTML = `getMonth() is ${monthNow}; the name is ${monthNames[monthNow]}`;
+        </script>
+    </body>
+</html>

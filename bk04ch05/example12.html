@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The setTimeout Method</title>
+    <style>
+        body {
+            margin: 1em;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Create a message
+        const str = "Hello World!";
+        
+        // Set the timeout
+        const timeoutId = setTimeout(function (msg) {
+            document.write(msg);
+        }, 5000, str);        
+    </script>
+</body>
+</html>

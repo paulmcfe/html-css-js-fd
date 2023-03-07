@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The :checked Pseudo-Class</title>
+        <style>
+            body {
+                margin: 32px;
+                width: fit-content;
+            }
+            div {
+                margin: .5rem 0 0 1rem;
+            }
+            input[type="checkbox"] {
+                margin-right: .5rem;
+            }
+            input[type="checkbox"]:checked {
+               box-shadow: 0 0 10px 3px red;
+            }
+            input[type="checkbox"]:checked + label {
+               color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>
+                    What’s your phobia? (please check all that apply)
+                </legend>
+                <div>
+                    <input type="checkbox" name="phobia" value="Ants" id="cb-ants">
+                    <label for="cb-ants">
+                        Myrmecophobia (Fear of ants)
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" name="phobia" value="Bald" id="cb-bald">
+                    <label for="cb-bald">
+                        Peladophobia (Fear of becoming bald)
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" name="phobia" value="Beards" id="cb-beards" checked>
+                    <label for="cb-beards">
+                        Pogonophobia (Fear of beards)
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" name="phobia" value="Bed" id="cb-bed">
+                    <label for="cb-bed">
+                        Clinophobia (Fear of going to bed)
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" name="phobia" value="Chins" id="cb-chins" checked>
+                    <label for="cb-chins">
+                        Geniophobia (Fear of chins)
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" name="phobia" value="Flowers" id="cb-flowers">
+                    <label for="cb-flowers">
+                        Anthophobia (Fear of flowers)
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" name="phobia" value="Flying" id="cb-flying">
+                    <label for="cb-flying">
+                        Aviatophobia (Fear of flying)
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" name="phobia" value="Purple" id="cb-purple">
+                    <label for="cb-purple">
+                        Porphyrophobia (Fear of purple)
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" name="phobia" value="Teeth" id="cb-teeth" checked>
+                    <label for="cb-teeth">
+                        Odontophobia (Fear of teeth)
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" name="phobia" value="Thinking" id="cb-thinking">
+                    <label for="cb-thinking">
+                        Phronemophobia (Fear of thinking)
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" name="phobia" value="Vegetables" id="cb-vegetables">
+                    <label for="cb-vegetables">
+                        Lachanophobia (Fear of vegetables)
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" name="phobia" value="Fear" id="cb-fear" checked>
+                    <label for="cb-fear">
+                        Phobophobia (Fear of fear)
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" name="phobia" value="Everything" id="cb-everything">
+                    <label for="cb-everything">
+                        Pantophobia (Fear of everything)
+                    </label>
+                </div>
+            </fieldset>
+        </form>
+    </body>
+</html>

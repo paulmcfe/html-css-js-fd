@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Setting the width</title>
+        <style>
+            div {
+                border: 1px solid #333;
+                background: #f8f8f8;
+                padding: 8px;
+                width: 650px;
+            }
+            p {
+                padding: 8px;
+                border: 2px solid black;
+            }
+            
+            p.width-value {
+                width: 200px;
+            }
+            p.width-percentage {
+                width: 75%;
+            }
+            p.width-fit-content {
+                width: fit-content;
+            }
+            p.width-max-content {
+                width: max-content;
+            }
+            p.width-min-content {
+                width: min-content;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            This <code>div</code> element (<code>width: 650px</code>) is the container for all the following <code>p</code> elements:
+            <p class="width-value">
+                I'm a <code>p</code> element styled with <code>width: 200px;</code>
+            </p>
+            <p class="width-percentage">
+                I'm a <code>p</code> element styled with <code>width: 75%;</code>
+            </p>
+            <p class="width-fit-content">
+                I'm a <code>p</code> element styled with <code>width: fit-content;</code>
+            </p>
+            <p class="width-max-content">
+                I'm a slightly long-winded, verbose, garrulous, possibly even circumlocutory <code>p</code> element styled with <code>width: max-content;</code>
+            </p>
+            <p class="width-fit-content">
+                I'm a slightly long-winded, verbose, garrulous, possibly even circumlocutory <code>p</code> element styled with <code>width: fit-content;</code>
+            </p>
+            <p class="width-min-content">
+                I'm a more breviloquent <code>p</code> element styled with <code>width: min-content;</code>
+            </p>
+        </div>
+    </body>
+</html>

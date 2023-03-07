@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The child combinator (>)</title>
+        <style>
+            /* * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            } */
+            body {
+                width: fit-content;
+            }
+            aside, div {
+                margin: 8px;
+                padding: 8px;
+            }
+            h4 {
+                margin-bottom: 0;
+            }
+            aside > h4 {
+                color: green;
+                border-top: 3px solid black;
+                border-bottom: 5px double black;
+                padding: 4px 0;
+                text-transform: uppercase;
+            }
+        </style>
+    </head>
+    <body>
+        <aside>
+            <h4>Links:</h4>
+            <div>
+                <a href="example01.html">The type selector</a><br>
+                <a href="example02.html">The class selector</a><br>
+                <a href="example03.html">The id selector</a><br>
+                <a href="example04.html">The descendant selector</a>
+            </div>
+            <h4>See Also:</h4>
+            <div>
+                <a href="../bk04ch06/example02.html">querySelectorAll()</a><br>
+                <a href="../bk04ch06/example03.html">classList.add()</a><br>
+                <a href="../bk04ch06/example04.html">getElementById())</a>
+            </div>
+        </aside>
+    </body>
+</html>

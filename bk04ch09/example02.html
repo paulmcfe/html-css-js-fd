@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Converting a JSON string to a JavaScript object</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            // Declare a JSON string
+            const userDataJSON = `{
+                "bgColor": "darkolivegreen",
+                "textColor": "antiquewhite",
+                "textSize": 20,
+                "typefaces": [
+                    "Georgia",
+                    "Verdana",
+                    "serif"
+                ],
+                "subscriber": true,
+                "subscriptionType": 3
+            }`;
+            
+            // Parse it
+            const userData = JSON.parse(userDataJSON);
+            
+            // Display the result
+            console.log(userData);
+        </script>
+    </body>
+</html>

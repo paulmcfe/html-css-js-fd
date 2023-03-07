@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Stringifying a JavaScript object to JSON</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+            pre {
+                margin-top: .5em;
+            }
+        </style>
+    </head>
+    <body>
+        <pre id="output">
+        </pre>
+
+        <script>
+            // Declare a JavaScript object
+            const userData = {
+                bgColor: "darkolivegreen",
+                textColor: "antiquewhite",
+                textSize: "1.25em",
+                typefaces: ["Georgia", "Verdana", "serif"],
+                subscriber: true,
+                subscriptionType: 3
+            }
+            
+            // Stringify it
+            const userDataJSON = JSON.stringify(userData, null, "    ");
+            
+            // Display the result
+            document.querySelector('#output').innerHTML = userDataJSON;
+            console.log(userDataJSON);
+        </script>
+    </body>
+</html>

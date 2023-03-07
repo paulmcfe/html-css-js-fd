@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The startsWith(), includes(), and endsWith() methods</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+            div {
+                margin-top: .5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="output">
+        </div>
+
+        <script>
+            const bookName = "HTML, CSS, and JavaScript For Dummies";
+            console.log(bookName.startsWith("HTML")); // Returns true
+            console.log(bookName.startsWith("CSS", 6)); // Returns true
+            console.log(bookName.includes("JavaScript")); // Returns true
+            console.log(bookName.includes("for")); // Returns false
+            console.log(bookName.endsWith("Dummies")); // Returns true
+            console.log(bookName.endsWith("JavaScript", 25)); // Returns true
+        </script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+    <head>
+        <meta charset="utf-8">
+        <title>Random Sentence Generator</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+            div {
+                margin: .5rem 1rem;
+                padding: .5rem;
+                font-family: Georgia, serif;
+                font-size: 2rem;
+            }
+            button {
+                margin-left: 1.5rem;
+                padding: .5rem;
+                font-size: 1.25rem;
+                border-radius: 10px;
+                box-shadow: 1px 2px 3px black;
+            }
+        </style>
+    </head>
+    <body>        
+        <div>
+        </div>
+        <button>
+            Generate a New Random Sentence
+        </button>
+        <script>
+            const arrayFirst = ["Arnold","Aaron","Adam","Adrian","Allison","Amanda","Amelia","Amos","Art","Austin","Benjamin","Bernie","Bert","Bob","Brad","Brent","Biff","Burt","Charlotte","Chelsea","Christopher","Chuck","Claire","Clayton","Clem","Cliff","Cloey","Corey","Devin","Don","Donald","Doug","Douglas","Dwayne","Dwight","Ed","Eddie","Edith","Franklin","Gary","Greg","Hattie","Henry","Isabel","Irma","Jessica","Jill","Jillian","John","Jordan","Joseph","Joy","Jocelyn","Julia","Justin","Karen","Liz","Lori","Luke","Mandy","Margaret","Matt","Matthew","Marvin","Maud","Melissa","Melanie","Michelle","Miranda","Molly","Morgan","Natalie","Nate","Nathan","Nicholas","Nick","Oliver","Ollie","Oswald","Paul","Penelope","Penny","Rachel","Randy","Ray","Rudolph","Robert","Roger","Roland","Rose","Roy","Russ","Russell","Sam","Samuel","Sarah","Scott","Shannon","Sharon","Stacey","Stella","Stephanie","Stephen","Stewy","Steve","Steven","Ted","Tim","Timothy","Theodore","Thomas","The Man","Trent","Tristan","Tyrone","Wally","Walton","Whitier","William","Willy","Vicky","Victor","Victoria","Zach","The King","The Queen","She","It","He","She","He","She","He","She","He","She","He","She","He","She","He","She","He","She"];
+            const arraySecond = ["ambled towards the","bemoaned the","ate the","yelled at the","poured out the","cloyed the","burgled the","chuckled at the","kindled the","murdered the","lurched toward the","pranced with a","pummeled the","thwarted the","snooped in the","warbled with the","wailed with the","tapped the","pondered over the","pinched the","tainted the","pelted the","pranced in front of the","marveled at the","lurked behind the","lurched in front of the","dreamed about the","quickly spun the","immured the"];
+            const arrayThird = ["blue","green","yellow","purple","black","brown","tall","short","cruel","terrible","mean","kind","gentle","dripping","fallow","mixed","confused","trapped","crafty","tainted","cordial","choice","marvelous","checkered","chalky","brisk","bleak","apt","droll","elegant","ethereal","furtive","ghastly","gallant","glassy","glib","disheveled","icy","wraithlike","wan","quaint","dreary","polished","creamy"];
+            const arrayFourth =    ["man,","woman,","girl,","human,","lady,","prince,","waif,","princess,","sword,","wagon,","car,","vehicle,","automobile,","horse,","cart,","cow,","cat,","dog,","cards,","tea,","drink,","refreshments,","chess pieces,","calendar,","water glass,","envelope,","stamp,","boot,","newspaper,","balloon,","computer,","radio,","school,","compact disc,","wallet,","mouse,","chipmunk,","rat,","ship,","roadway,","hill,","story,","stick,","fairy,","tail,","tire,","shoe,","notebook,","ear,","toe,","aid,","government,","group,","chat room,","pen,","claw,","root,","name,","knob,","eraser,","paper,","plug,","screwdriver,","holdup,","bank,","money,","thermometer,","cement,","button,","package,","game,","church,","preacher,","sheep,","moose,","river,","stream,","staff,","hamper,","picnic,","microphone,","disk,","antenna,","ruler,","folder,","copy machine,","toner,","paperback,","lock,","afghan,","faucet,","water,","wave,","snowboard,","ski,","ticket,","ticker,","ballgame,","clock,","football,","golf,","baseball,","arrow,","camp,","tie,","foyer,","reception,","friend,","graduation,","party,","barn,","chicken,","gum,","binding,","rule,","author,","cowboy,","Texas,","Idaho,","moon,","range,","sound,","company,","coffee,","soda,","printer,","paper weight,","screw,","nail,","hammer,","Bible,","stencil,","font,","bookshelf,","number,","icon,","arrow,","sweatshirt,","case,","cap,","hat,","earring,","shed,","bone,"];
+            const arrayFifth = ["Arnold","Aaron","Adam","Adrian","Allison","Amanda","Amelia","Amos","Art","Austin","Benjamin","Bernie","Bert","Bob","Brad","Brent","Biff","Burt","Charlotte","Chelsea","Christopher","Chuck","Claire","Clayton","Clem","Cliff","Cloey","Corey","Devin","Don","Donald","Doug","Douglas","Dwayne","Dwight","Ed","Eddie","Edith","Franklin","Gary","Greg","Hattie","Henry","Isabell","Irma","Jessica","Jill","Jillian","John","Jordan","Joseph","Joy","Jocelyn","Julia","Justin","Liz","Lori","Luke","Mandy","Margaret","Matt","Matthew","Marvin","Maud","Melissa","Melanie","Michelle","Miranda","Molly","Morgan","Natalie","Nate","Nathan","Nicholas","Nick","Oliver","Ollie","Oswald","Paul","Penelope","Penny","Rachel","Randy","Ray","Richard","Robert","Roger","Roland","Rose","Roy","Russ","Russell","Sam","Samuel","Sarah","Scott","Shannon","Sharon","Stacie","Stella","Stephanie","Stephen","Stu","Steve","Steven","Ted","Tim","Timothy","Theodore","Thomas","Tammy","Trent","Tristan","Tyrone","Wally","Walton","Whitier","William","Willy","Vicky","Victor","Victoria","Zach","Zachary","he","she","it","he","she","he","she","he","she","he","she","he","she","he","she","he","she","he","she"];
+            const arraySixth = ["murmured","cried","returned","bantered","said","shouted","yelled","cried out","retorted","chortled","mumbled","shouted"];
+            const arraySeventh = ["in a hurt tone.","with great emphasis.","in a pleased tone.","warmly.","thrillingly.","thoughtfully.","sweetly.","sweepingly.","sulkily.","darkly.","coyly.","cooly.","coldly.","absently.","archly.","blankly.","briskly.","insouciantly.","emphatically.","breezily.","pleasingly.","dully."];
+            
+            // This function generates the random sentence from the above arrays
+            function generateRandomSentence() {
+                
+                // Generate a random item from each array
+                const firstItem = parseInt(Math.random() * arrayFirst.length);
+                const secondItem = parseInt(Math.random() * arraySecond.length);
+                const thirdItem = parseInt(Math.random() * arrayThird.length);
+                const fourthItem = parseInt(Math.random() * arrayFourth.length);
+                const fifthItem = parseInt(Math.random() * arrayFifth.length);
+                const sixthItem = parseInt(Math.random() * arraySixth.length);
+                const seventhItem = parseInt(Math.random() * arraySeventh.length);
+                
+                // Construct the sentence
+                const sentence =  `“${arrayFirst[firstItem]} ${arraySecond[secondItem]} ${arrayThird[thirdItem]} ${arrayFourth[fourthItem]}” ${arrayFifth[fifthItem]} ${arraySixth[sixthItem]} ${arraySeventh[seventhItem]}`;
+                
+                // Add the sentence to the <div>
+                document.querySelector('div').innerHTML = sentence;
+                
+                // Generate random colors (use values < 128 to keep the text dark)
+                const randomRed = parseInt(Math.random() * 128);
+                const randomGreen = parseInt(Math.random() * 128);
+                const randomBlue = parseInt(Math.random() * 128);
+                
+                // Apply the random colors to the <div>
+                document.querySelector('div').style.color = "rgb(" + randomRed + "," + randomGreen + "," + randomBlue + ")";
+                
+                // Take the focus away from the clicked button
+                document.querySelector('button').blur();
+            }
+
+            // Generate the initial random sentence
+            debugger;
+            generateRandomSentence();
+            
+            // Set up an event listener to generate a new random sentence each time the button is clicked
+            document.querySelector('button').addEventListener('click', generateRandomSentence);
+            
+        </script>
+    </body>
+</html>

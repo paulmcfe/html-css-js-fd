@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Working with block scope</title>
+    <style>
+        body {
+            margin: 1em;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        if (true) {
+            const myMessage = "I'm in the scope!";
+            console.log("Inside the if block: " + myMessage);
+        }
+        console.log("Outside the if block: " + myMessage);
+    </script>
+</body>
+</html>

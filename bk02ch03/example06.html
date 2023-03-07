@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Example 6: The &lt;source&gt; Tag for Video</title>
+    </head>
+    <style>
+        body {
+            margin: 1em;
+            font-size: 1.25em;
+        }
+    </style>
+    <body>
+        <video poster="images/bear.png"
+               width="640"
+               height="480"
+               autoplay
+               controls
+               loop>
+            <source src="videos/bear.mp4"
+                    type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
+            <source src="videos/bear.webm"
+                    type='video/webm; codecs="vp8, vorbis"'>
+            <source src="videos/bear.ogv"
+                    type='video/ogg; codecs="theora, vorbis"'>
+        </video>
+
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Ordering array elements: sort()</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+            div {
+                margin-top: .5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="output">
+        </div>
+
+        <script>
+            // This function sorts numbers from lowest to highest
+            function numericSort(a, b) {
+                return (a - b);
+            }
+            
+            const myArray = [3, 5, 1, 6, 2, 4];
+            
+            // Write the array before sorting it
+            let str = "myArray (before sorting): " + myArray + "<br>";
+            
+            // Sort the array
+            myArray.sort(numericSort);
+            
+            // Write the array after sorting it
+            str+= "myArray (after sorting): " + myArray;
+            
+            document.getElementById('output').innerHTML = str;
+        </script>
+    </body>
+</html>

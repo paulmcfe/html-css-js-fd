@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The filter Property</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            body {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: 1fr 4rem 1fr 2rem;
+                justify-content: space-around;
+                margin: 1rem;
+            }
+            img {
+                display: block;
+                height: 256px;
+                width: 176px;
+                margin-bottom: 0.75rem;
+            }
+            .blur {
+                filter: blur(5px);
+            }
+            .brightness {
+                filter: brightness(1.6);
+            }
+            .contrast {
+                filter: contrast(200%);
+            }
+            .drop-shadow {
+                filter: drop-shadow(12px 12px 8px gray);
+            }
+            .grayscale {
+                filter: grayscale(100%);
+            }
+            .hue-rotate {
+                filter: hue-rotate(180deg);
+            }
+            .invert {
+                filter: invert(100%);
+            }
+            .opacity {
+                filter: opacity(33%);
+            }
+            .saturate {
+                filter: saturate(250%);
+            }
+            .sepia {
+                filter: sepia(75%);
+            }
+            .caption {
+                font-family: Lucida, Monaco, monospace;
+                font-size: 0.9rem;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="images/please-brake-for-snakes.jpg" width="704" height="1024" alt="A photo of a sign that reads Please brake for snakes" class="blur">
+        <img src="images/please-brake-for-snakes.jpg" width="704" height="1024" alt="A photo of a sign that reads Please brake for snakes" class="brightness">
+        <img src="images/please-brake-for-snakes.jpg" width="704" height="1024" alt="A photo of a sign that reads Please brake for snakes" class="contrast">
+        <img src="images/please-brake-for-snakes.jpg" width="704" height="1024" alt="A photo of a sign that reads Please brake for snakes" class="drop-shadow">
+        <img src="images/please-brake-for-snakes.jpg" width="704" height="1024" alt="A photo of a sign that reads Please brake for snakes" class="grayscale">
+        <div class="caption"><code>filter: blur(5px)</code></div>
+        <div class="caption"><code>filter: brightness(1.6)</code></div>
+        <div class="caption"><code>filter: contrast(200%)</code></div>
+        <div class="caption"><code>filter: drop-shadow(12px 12px 8px gray)</code></div>
+        <div class="caption"><code>filter: grayscale(100%)</code></div>
+        <img src="images/please-brake-for-snakes.jpg" width="704" height="1024" alt="A photo of a sign that reads Please brake for snakes" class="hue-rotate">
+        <img src="images/please-brake-for-snakes.jpg" width="704" height="1024" alt="A photo of a sign that reads Please brake for snakes" class="invert">
+        <img src="images/please-brake-for-snakes.jpg" width="704" height="1024" alt="A photo of a sign that reads Please brake for snakes" class="opacity">
+        <img src="images/please-brake-for-snakes.jpg" width="704" height="1024" alt="A photo of a sign that reads Please brake for snakes" class="saturate">
+        <img src="images/please-brake-for-snakes.jpg" width="704" height="1024" alt="A photo of a sign that reads Please brake for snakes" class="sepia">
+        <div class="caption"><code>filter: hue-rotate(180deg)</code></div>
+        <div class="caption"><code>filter: invert(100%)</code></div>
+        <div class="caption"><code>filter: opacity(33%)</code></div>
+        <div class="caption"><code>filter: saturate(250%)</code></div>
+        <div class="caption"><code>filter: sepia(75%)</code></div>
+    </body>
+</html>

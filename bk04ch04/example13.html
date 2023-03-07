@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exiting a loop using the break statement</title>
+        <style>
+            body {
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            const numberToGuess = Math.ceil(Math.random() * 10);
+            let promptMessage = "Guess a number between 1 and 10:";
+            let totalGuesses = 1;
+            do {
+                const guess = Number(prompt(promptMessage));
+                if (guess === 0) {
+                    break;
+                } else if (guess === numberToGuess) {
+                    document.write ("You guessed it in " + totalGuesses + 
+                          (totalGuesses === 1 ? " try." : " tries."));
+                    break;
+                } else if (guess < numberToGuess) {
+                    promptMessage = "Sorry, your guess was too low. Try again:";
+                } else {
+                    promptMessage = "Sorry, your guess was too high. Try again:";
+                }
+                totalGuesses += 1;
+            }
+            while (true);
+        </script>
+    </body>
+</html>

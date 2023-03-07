@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Passing multiple values to a function</title>
+    <script>
+        function changeColors(newBackColor, newForeColor) {
+            document.body.style.backgroundColor = newBackColor;
+            document.body.style.color = newForeColor;
+        }
+    </script>
+</head>
+<body>
+    <h1>Passing Multiple Values to a Function</h1>
+    <button onclick="changeColors('red', 'white')">
+        Red Background, White Text
+    </button>
+    <button onclick="changeColors('white', 'red')">
+        White Background, Red Text
+    </button>
+</body>
+</html>

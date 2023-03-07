@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Centering an element horizontally and vertically</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            body {
+                margin: 1rem;
+            }
+            .container {
+                align-items: center;
+                border: 5px double black;
+                display: flex;
+                flex-direction: row;
+                height: 50vh;
+                justify-content: center;
+            }
+            .item {
+                font-family: Georgia, serif;
+                font-size: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">Look, ma, I’m centered!</div>
+        </div>
+    </body>
+</html>

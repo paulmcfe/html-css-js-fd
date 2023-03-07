@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Populating an Array with Data</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+            div {
+                margin-top: .5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="output">
+        </div>
+
+        <script>
+            // Declare the arrays
+            const array1 = ["Make", "this", "a", "sentence."];
+            const array2 = ["antid", "isest", "ablis", "hment", "arian", "ism"];
+            const array3 = ["John", "Paul", "George", "Ringo"];
+            
+            //Join them to strings
+            const string1 = array1.join(" ");
+            const string2 = array2.join("");
+            const string3 = array3.join();
+            
+            // Display the results
+            document.getElementById('output').innerHTML = string1 + '<br>' + string2 + '<br>' + string3;
+        </script>
+    </body>
+</html>

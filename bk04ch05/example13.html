@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The setInterval Method</title>
+    <style>
+        body {
+            margin: 1em;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let counter = 10;
+        
+        // Set the interval
+        const intervalId = setInterval(function () {
+        
+            // Display the countdown and then decrement the counter
+            document.open();
+            document.write(counter);
+            counter -= 1;
+            
+            // Cancel the interval when we hit 0
+            if (counter < 0) {
+                clearInterval(intervalId);
+                document.open();
+                document.write("All done!");
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

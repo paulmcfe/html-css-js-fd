@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Tweaking HTML Attributes with JavaScript</title>
+    </head>
+    <body>
+        <header>
+            <img id="header-image"
+                src="mangosteen.png"
+                alt="Drawing of a mangosteen">
+        </header>
+        <script>
+            const headerImage = document.getElementById('header-image');
+            console.log(headerImage.id);
+            console.log(headerImage.src);
+            console.log(headerImage.alt);
+        </script>
+    </body>
+</html>

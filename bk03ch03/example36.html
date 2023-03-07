@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The ::first-line Pseudo-Element</title>
+        <style>
+            body {
+                margin: 32px;
+                max-width: 500px;
+            }
+            p {
+                text-indent: 8px;
+                margin: 8px 0;
+            }
+            h2 + p {
+                text-indent: 0;
+            }
+            h2 + p::first-line {
+                text-transform: uppercase;
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <h2>Teen Boy's Vocabulary Down to a Single Word</h2>
+            <p>Area teen Dylan Geronimo now communicates with his parents and teachers using just the word "whatever." With subtle voice inflections, Mr. Geronimo can convey the full range of his emotions: sullenness, disgust, exasperation, and a seething, nameless rage.
+            </p>
+            <p>"It was frustrating, at first," said Betty Geronimo, Dylan's mother. "It seemed like he was giving us the same answer to every question. Then we learned the difference between 'whatever' and 'what-EVER'."</p>
+            <p>The phenomenon is called Adolescent Vocabulary Attrition Syndrome, according to Hans Longwinded, a language chiropractor. "Speaking is quite painful for most male teenagers, so they ease the pain by shedding words."</p>
+            <p>When asked to comment on this story, Mr. Geronimo said, "WHAT-ever."</p>
+        </article>
+    </body>
+</html>

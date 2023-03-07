@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Working with function scope</title>
+    <style>
+        body {
+            margin: 1em;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let counter = 0;
+        addOne();
+        
+        function addOne() {
+            counter =+ 1;
+            if (confirm("counter is now " + counter + ". Add another one?")) {
+                addOne();
+            }
+        }
+        
+        document.write("Counter ended up at " + counter);
+    </script>
+</body>
+</html>

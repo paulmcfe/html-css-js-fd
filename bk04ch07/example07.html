@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Iterating to create a new array: map()</title>
+    </head>
+    <body>
+        <script>
+            // Declare an array of Fahrenheit temperatures
+            const tempsFahrenheit = [-40, 0, 32, 100, 212];
+            
+            // Test each divisor
+            const tempsCelsius = tempsFahrenheit.map(currentTemp => {
+                return (currentTemp - 32) * 0.5556;
+            });
+            
+            // Output the result
+            console.log(tempsCelsius);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Stepping Into Asynchronous Code</title>
+    <style>
+        body {
+            margin: 1em;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const texter1 = 'Hello script scope world';
+        const myArray = [1, 2, 3];
+        for (const val of myArray) {
+            const valSq = val * val;
+            console.log(valSq);
+        }
+        debugger;
+        setTimeout(() => {
+            const texter = 'Hello Block scope world';
+            console.log('Here I am inside the setTimeout() block!');
+        }, 5000);
+        console.log('Okay, now here I am outside the setTimeout) block!');
+    </script>
+</body>
+</html>

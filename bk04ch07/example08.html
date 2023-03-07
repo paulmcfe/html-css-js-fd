@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Iterating an array down to a value: reduce()</title>
+    </head>
+    <body>
+        <script>
+            // Declare an array of product inventory
+            const unitsInStock = [547, 213, 156, 844, 449, 71, 313, 117];
+            
+            // Get the total units in stock
+            const initialUnits = 0;
+            const totalUnits = unitsInStock.reduce((accumulatedUnits, currentInventoryValue) => {
+                return accumulatedUnits + currentInventoryValue;
+            }, initialUnits);
+            
+            // Output the result
+            console.log("Total units in stock: " + totalUnits);
+        </script>
+    </body>
+</html>

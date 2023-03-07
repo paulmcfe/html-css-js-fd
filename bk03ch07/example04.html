@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Self-hosting a web font family</title>
+        <style>
+            @font-face {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                src: url('fonts/roboto-regular.woff2') format('woff2'),
+                     url('fonts/roboto-regular.woff') format('woff');
+            }
+            @font-face {
+                font-family: 'Roboto';
+                font-style: italic;
+                font-weight: 400;
+                src: url('fonts/roboto-italic.woff2') format('woff2'),
+                     url('fonts/roboto-italic.woff') format('woff'); 
+            }
+            @font-face {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                src: url('fonts/roboto-700.woff2') format('woff2'),
+                     url('fonts/roboto-700.woff') format('woff');
+            }
+            body {
+                font-family: Roboto, Tahoma, sans-serif;
+                font-size: 125%;
+                line-height: 1.5;
+                margin: 1rem;
+                max-width: 65ch;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Typography exists to honor content</h2>
+        <p>
+            In a world rife with unsolicited messages, typography must often draw attention to itself before it will be read. Yet in order to be read, it must relinquish the attention it has drawn. Typography with anything to say therefore aspires to a kind of statuesque transparency. It’s other traditional goal is durability: not immunity to change, but a clear superiority to fashion. Typography at its best is a visual form of language linking timelessness and time. <br>—Robert Bringhurst, <i>The Elements of Typography</i>
+        </p>
+    </body>
+</html>

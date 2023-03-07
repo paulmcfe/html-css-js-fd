@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Working with function scope</title>
+    <style>
+        body {
+            margin: 1em;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const myMessage = "I've got global scope!";
+        
+        if (true) {
+            console.log("Inside the if block: " + myMessage);
+        }
+        function C() {
+            console.log("Function C: " + myMessage);
+        }
+        C();
+        console.log("Outside any block or function: " + myMessage);
+    </script>
+</body>
+</html>

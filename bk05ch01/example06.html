@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Clearing a Float (Part Two)</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            body {
+                margin: 1rem;
+                width: 35rem;
+            }
+            header {
+                margin-bottom: 1rem;
+            }
+            nav {
+                margin-top: .5rem;
+            }
+            nav > a {
+                display: inline-block;
+                padding: 0 2rem 0 0;
+                text-decoration: none;
+            }
+            article > img {
+                float: left;
+                margin-top: 1em;
+                height: auto;
+                width: 200px;
+            }
+            footer {
+                clear: left;
+                padding-top: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Can’t You Read the Sign?</h1>
+        </header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="semantics.html">Signs</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">Suggest a Sign</a>
+        </nav>
+        <article>
+            <img src="images/keep-off-the-grass.jpg" alt="A sign reading Keep Off the Grass beside a well-trodden path running across the grass.">
+        </article>
+        <footer>
+            &copy; Can’t You Read?, Inc.
+        </footer>
+    </body>
+</html>

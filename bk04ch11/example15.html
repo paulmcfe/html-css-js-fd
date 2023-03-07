@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Handling and Triggering Form Events</title>
+        <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }     
+            body {
+                max-width: 25rem;
+                margin: 1rem;
+            }            
+            label {
+                display: block;
+                margin-top: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <label for="bgcolor">Select a background color</label>
+            <input id="bgcolor" type="color" name="bg-color" value="#ffffff">
+        </form>
+        <script>
+            document.querySelector('#bgcolor').addEventListener('change', function() {
+                let backgroundColor = this.value;
+                document.body.bgColor = backgroundColor;
+            });
+        </script>
+    </body>
+</html>

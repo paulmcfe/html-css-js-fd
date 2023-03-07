@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The slice() method</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+            div {
+                margin-top: .5em;
+            }
+        </style>
+    </head>
+    <body>
+        <pre>
+HTML, CSS, and JavaScript For Dummies
+0123456789012345678901234567890123456
+        </pre>
+        <div id="output">
+        </div>
+
+        <script>
+            const bookName = "HTML, CSS, and JavaScript For Dummies";
+            
+            let str = "slice(0, 4) = " + bookName.slice(0, 4) + "<br>";
+            str += "slice(6, 9) = " + bookName.slice(6, 9) + "<br>";
+            str += "slice(15) = " + bookName.slice(15) + "<br>";
+            str += "slice(0, -12) = " + bookName.slice(0, -12);
+            document.getElementById("output").innerHTML = str;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Avoiding Infinite Recursion</title>
+    <style>
+        body {
+            margin: 1em;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let currentCall = 1;
+        const maximumCalls = 3;
+        
+        recursionTest();
+        
+        function recursionTest() {
+            if (currentCall <= maximumCalls) {
+                console.log(currentCall);
+                currentCall += 1;
+                recursionTest();
+            }
+        }
+    </script>
+</body>
+</html>

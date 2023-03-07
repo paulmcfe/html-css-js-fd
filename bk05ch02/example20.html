@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Classic page layout with Flexbox</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            html {
+                height: 100%;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                font-size: clamp(1rem, 0.5rem + 2.5vw, 3rem);
+                gap: 1rem;
+                height: 100%;
+                margin-left: 1rem;
+                width: 75vw;
+            }
+            header,
+            nav,
+            article,
+            aside,
+            footer {
+                border: 1px solid black;
+                padding: 0.5rem;
+            }
+            main {
+                flex: 1;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            article {
+                flex: 1 0 15rem;
+            }
+            aside {
+                flex: 0 0 10rem;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            Header
+        </header>
+        <nav>
+            Navigation
+        </nav>
+        <main>
+            <article>
+                Article
+            </article>
+            <aside>
+                Aside
+            </aside>
+        </main>
+        <footer>
+            Footer
+        </footer>
+    </body>
+</html>

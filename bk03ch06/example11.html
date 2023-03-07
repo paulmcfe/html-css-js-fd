@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The background-position Property</title>
+        <style>
+            body {
+                margin: 2rem;
+                font-size: 100%;
+            }
+            div {
+                background-image: url("images/webdev-workshop.png");
+                background-size: 50px;
+                border: 1px solid black;
+                height: 15vh;
+                margin-bottom: 2rem;
+                position: relative;
+                width: 50vw;
+            }
+            .repeat-x {
+                background-repeat: repeat-x;
+            }
+            .repeat-x::before {
+                content: "background-repeat: repeat-x";
+                font-family: "Courier New", monospace;
+                position: absolute;
+                top: -25px;
+            }
+            .repeat-y {
+                background-repeat: repeat-y;
+            }
+            .repeat-y::before {
+                content: "background-repeat: repeat-y";
+                font-family: "Courier New", monospace;
+                position: absolute;
+                top: -25px;
+            }
+            .space {
+                background-repeat: space;
+            }
+            .space::before {
+                content: "background-repeat: space";
+                font-family: "Courier New", monospace;
+                position: absolute;
+                top: -25px;
+            }
+            .round {
+                background-repeat: round;
+            }
+            .round::before {
+                content: "background-repeat: round";
+                font-family: "Courier New", monospace;
+                position: absolute;
+                top: -25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="repeat-x">            
+        </div>
+        <div class="repeat-y">            
+        </div>
+        <div class="space">            
+        </div>
+        <div class="round">            
+        </div>
+    </body>
+</html>

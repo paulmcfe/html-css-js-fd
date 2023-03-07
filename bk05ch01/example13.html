@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Making elements stick</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            body {
+                font-family: Georgia, serif;
+                font-size: 1.25rem;
+                line-height: 1.4;
+                margin: 2rem;
+                width: 65ch;
+            }
+            h1 {
+                margin: .6rem 0;
+            }
+            main,
+            h2,
+            p {
+                margin-top: 1rem;
+            }
+            .sample-text {
+                border-left: 1px solid hsl(0, 0%, 50%);
+                font-style: italic;
+                margin: 1rem 2rem;
+                padding: 0 0.75rem;
+            }
+            h2 {
+                background-color: white;
+                position: sticky;
+                top: 0;
+            }
+            section {
+                outline: 1px dotted hsl(0 0% 50%);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Lorem ipsum blah blah blah</h1>
+        </header>
+        <main>
+            <article>
+                <p>
+                    When a movie director needs a warm body or two to check lighting, camera angles, and whatever else movie directors check, they don’t trot in the high-priced talent for such a pedestrian task. No, they have stand-ins who are paid to perform that task.
+                </p>
+                <p>
+                    Similarly, when a designer needs some text to lay out a page to check typography, alignment, and whatever else designers check, they don’t use actual copy from the ad, brochure, or whatever. Instead, they pour in whatever quantity they need of that old semi-Latin standby, <i>Lorem ipsum</i> text:
+                </p>
+                <p class="sample-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel leo in eros rhoncus sollicitudin. Integer et nisl mattis, tempor dui vel, sollicitudin sapien. Ut aliquet, est id ullamcorper accumsan, orci massa molestie felis, a mattis nulla eros congue nisi. Donec aliquet, ligula quis fringilla malesuada, metus nunc porta metus, sit amet interdum dui risus nec risus.
+                </p>
+                <p>
+                    Haven’t we all seen <em>that</em> text a kajillion times! I suppose there’s nothing wrong with using <i>Lorem ipsum</i> when you need it. After all, it’s English-like, has a variety of word lengths, it’s neutral (since it’s essentially meaningless), and doesn’t require you to create copy (or to pester the person who does).
+                </p>
+                <p>
+                    Overall, though, it’s better to use actual copy when you can because only real words in their actual setting can tell you definitively if your design is working. But sometimes you have no choice because the copy isn’t ready or it’s too early in the design process. But here’s the thing: If you need placeholder text, you don’t have to automatically reach for the <i>Lorem ipsum</i> that’s been done to death. The web is home to tons of alternative <i>Lorem ipsum</i> generators that can help you easily break out of the same old, same old when it comes to dummy text.
+                </p>
+                <section>
+                    <h2>Cat ipsum</h2>
+                    <p><a href="http://www.catipsum.com/">http://www.catipsum.com/</a></p>
+                    <p>Sample:</p>
+                    <p class="sample-text">
+                        Cat ipsum dolor sit amet, prance along on top of the garden fence, annoy the neighbor's dog and make it bark stuff and things intrigued by the shower. Please stop looking at your phone and pet me sleep everywhere, but not in my bed get my claw stuck in the dog's ear and adventure always but drool yet roll over and sun my belly. Ooh, are those your $250 dollar sandals?
+                    </p>
+                </section>
+                <section>
+                    <h2>Cheese ipsum</h2>
+                    <p><a href="http://www.cheeseipsum.co.uk/">http://www.cheeseipsum.co.uk/</a></p>
+                    <p>Sample:</p>
+                    <p class="sample-text">
+                        Camembert de normandie rubber cheese fromage frais. Jarlsberg chalk and cheese say cheese parmesan cheese and biscuits st. agur blue cheese blue castello cream cheese. Cut the cheese caerphilly cheese and wine parmesan parmesan cottage cheese bavarian bergkase queso. Rubber cheese.
+                    </p>
+                </section>
+                <section>
+                    <h2>Hipster ipsum</h2>
+                    <p><a href="https://hipsum.co/">https://hipsum.co/</a></p>
+                    <p>Sample:</p>
+                    <p class="sample-text">
+                        Man braid keytar paleo iceland. Pop-up coloring book bruh air plant chambray cardigan. Offal retro four loko, tacos messenger bag butcher edison bulb unicorn big mood taxidermy farm-to-table knausgaard fixie four dollar toast health goth. Put a bird on it direct trade synth yr. Subway tile yes plz poke church-key.
+                    </p>
+                </section>
+                <section>
+                    <h2>Office ipsum</h2>
+                    <p><a href="http://officeipsum.com/">http://officeipsum.com/</a></p>
+                    <p>Sample:</p>
+                    <p class="sample-text">
+                        Translating our vision of having a market leading platform. Closing these latest prospects is like putting socks on an octopus. I'll book a meeting so we can solution this before the sprint is over. Let's circle back to that. We've bootstrapped the model 360. Productize the deliverables and focus on the bottom line. This is not the hill I want to die on.
+                    </p>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>

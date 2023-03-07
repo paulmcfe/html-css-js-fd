@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Converting getDay() into a day name - array technique</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+            div {
+                margin-top: .5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="output">
+        </div>
+
+        <script>
+            const dayNames = ["Sunday","Monday","Tuesday",
+            "Wednesday","Thursday","Friday","Saturday"];
+            
+            const dateNow = new Date();
+            const dayNow = dateNow.getDay();
+            document.getElementById("output").innerHTML = `getDay() is ${dayNow}; the name is ${dayNames[dayNow]}`
+        </script>
+    </body>
+</html>

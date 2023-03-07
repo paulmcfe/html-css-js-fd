@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Determining a person’s age</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+            div {
+                margin-top: .5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="output">
+        </div>
+
+        <script>
+            // Set the birth date: year, month, and day
+            const userYear = 1990;
+            const userMonth = 7;
+            const userDay = 23;
+            
+            // Make a Date object and change it
+            // to the user's birthday this year
+            const birthdayDate = new Date();
+            birthdayDate.setMonth(userMonth);
+            birthdayDate.setDate(userDay);
+            
+            // Store the current date
+            const currentDate = new Date();
+            const currentYear = currentDate.getFullYear();
+            
+            // Check to see if the birthday has yet to occur this year
+            let userAge;
+            if (currentDate < birthdayDate) {
+                userAge = currentYear - userYear - 1;
+            } else {
+                userAge = currentYear - userYear;
+            }
+            
+            document.getElementById("output").innerHTML = `You are ${userAge} years old.`;
+        </script>
+    </body>
+</html>

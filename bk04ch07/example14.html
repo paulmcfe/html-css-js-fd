@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Removing, replacing, and inserting elements: splice()</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+            div {
+                margin-top: .5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="output">
+        </div>
+
+        <script>
+            const array1 = ["A", "B", "C", "D", "E", "F"];
+            const array2 = ["A", "B", "C", "D", "E", "F"];
+            const array3 = ["A", "B", "C", "D", "E", "F"];
+            
+            // DELETION
+            // In array1, start at index 2 and delete to the end
+            // Return the deleted elements to the delete1 array
+            const delete1 = array1.splice(2);
+            
+            // Write array1
+            let str = "array1: " + array1 + "<br>";
+            
+            // Write delete1
+            str += "delete1: " + delete1 + "<br>";
+            
+            // REPLACEMENT
+            // In array2, start at index 3 and delete 2 elements
+            // Insert 2 elements to replace them
+            // Return the deleted elements to the delete2 array
+            const delete2 = array2.splice(3, 2, "d", "e");
+            
+            // Write array2
+            str += "array2: " + array2 + "<br>";
+            
+            // Write delete2
+            str += "delete2: " + delete2 + "<br>";
+            
+            // INSERTION
+            // In array3, start at index 1 and insert 3 elements
+            array3.splice(1, 0, "1", "2", "3")
+            
+            // Write array3
+            str += "array3: " + array3;
+            
+            document.getElementById('output').innerHTML = str;
+        </script>
+    </body>
+</html>

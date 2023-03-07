@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The Attribute Ends With Selector ($=)</title>
+        <style>
+            body {
+                width: fit-content;
+            }
+            h3{
+                margin: 16px;
+            }
+            ul {
+                margin-left: 16px;
+            }
+            li {
+                padding: 3px;
+            }
+            a[href$=".org"] {
+                color: firebrick;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Links (non-profits shown in red)</h3>
+        <ul>
+            <li><a href="https://en.wikipedia.org">Wikipedia</a></li>
+            <li><a href="https://instagram.com">Instagram</a></li>
+            <li><a href="https://mozilla.org">Mozilla</a></li>
+            <li><a href="https://npr.org">NPR</a></li>
+            <li><a href="https://amazon.com">Amazon</a></li>
+        </ul>
+    </body>
+</html>

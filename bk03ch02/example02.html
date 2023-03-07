@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The class selector</title>
+        <style>
+            body {
+                width: fit-content;
+            }
+            h1, h2, h3, h4 {
+                margin: 8px;
+                padding: 8px;
+            }
+            .subtitle {
+                color: royalblue;
+                font-style: italic;
+            }
+            h3.subtitle {
+                border: 2px dashed royalblue;
+            }
+            .subtitle.aside-title {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>“News” of the Word</h1>
+        <h2 class="subtitle">Language News You Won’t Find Anywhere Else (Because We Make It Up)</h2>
+        <article>
+            <h3 class="subtitle">Scientists Discover Elusive Soup-Nuts Continuum</h3>
+        </article>
+        <aside>
+            <h4 class="subtitle aside-title">Did You Know?</h3>
+        </aside>
+    </body>
+</html>

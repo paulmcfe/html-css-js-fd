@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Aligning grid items with justify-items</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                gap: 1vh;
+                align-content: flex-start;
+                height: 100%;
+                margin: 0 0.75rem;
+            }
+            .wrapper {
+                position: relative;
+            }
+            .container {
+                border: 5px double black;
+                display: grid;
+                grid-template-columns: repeat(3, auto);
+                grid-template-rows: auto auto;
+                margin-top: 1.5rem;
+                height: 20vh;
+                width: 25vw;
+            }
+            .container::before {
+                font-family: monospace;
+                font-size: 1.1rem;
+                left: 0;
+                position: absolute;
+                top: 0;
+                z-index: 1;
+            }
+            .stretch {
+                justify-items: stretch;
+            }
+            .stretch::before {
+                content: "stretch";
+            }
+            .center {
+                justify-items: center;
+            }
+            .center::before {
+                content: "center";
+            }
+            .start {
+                justify-items: start;
+            }
+            .start::before {
+                content: "start";
+            }
+            .end {
+                justify-items: end;
+            }
+            .end::before {
+                content: "end";
+            }
+            .item {
+                font-family: Verdana, sans-serif;
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
+                text-align: center;
+            }
+            .item1 {
+                background-color: hsl(0, 0%, 94%);
+            }
+            .item2 {
+                background-color: hsl(0, 0%, 88%);
+            }
+            .item3 {
+                background-color: hsl(0, 0%, 82%);
+            }
+            .item4 {
+                background-color: hsl(0, 0%, 76%);
+            }
+            .item5 {
+                background-color: hsl(0, 0%, 70%);
+            }
+            .item6 {
+                background-color: hsl(0, 0%, 64%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+        <div class="container start">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+            <div class="item item6">6</div>
+        </div>
+    </div>
+        <div class="wrapper">
+            <div class="container center">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+                <div class="item item4">4</div>
+                <div class="item item5">5</div>
+                <div class="item item6">6</div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="container end">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+                <div class="item item4">4</div>
+                <div class="item item5">5</div>
+                <div class="item item6">6</div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="container stretch">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+                <div class="item item4">4</div>
+                <div class="item item5">5</div>
+                <div class="item item6">6</div>
+            </div>
+        </div>
+    </body>
+</html>

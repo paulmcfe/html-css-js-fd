@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Iterating to find an element: find()</title>
+    </head>
+    <body>
+        <script>
+            // Declare an array of product objects
+            const products = [
+                { name: 'doodad', units: 547 },
+                { name: 'gizmo', units: 213 },
+                { name: 'gimcrackery', units: 156 },
+                { name: 'knickknack', units: 844 },
+                { name: 'bric-a-brac', units: 449 },
+                { name: 'thingamajig', units: 71 },
+                { name: 'watchamacallit', units: 313 },
+                { name: 'widget', units: 117 }
+            ];
+            
+            const strQuery = "gizmo";
+            const stock = products.find((currentProduct) => {
+                return currentProduct.name === strQuery;
+            });
+            
+            // Output the result
+            if (stock) {
+                console.log("Product " + stock.name + " has " + stock.units + " units in stock.");
+            } else {
+                console.log("Product " + strQuery + " not found.");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bypassing loop statements using the continue statement</title>
+        <style>
+            body {
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            let counter = 0;
+            let sum = 0;
+            while (counter < 3) {
+                const num = prompt("Type a number:", 1);
+                if (num === null) {
+                    continue;
+                }
+                sum += Number(num);
+                counter += 1;
+            }
+            document.write("The average of your numbers is " + sum / 3);
+        </script>
+    </body>
+</html>

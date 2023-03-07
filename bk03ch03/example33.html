@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The ::after Pseudo-Element</title>
+        <style>
+            body {
+                margin: 32px;
+                width: fit-content;
+            }
+            ul {
+                list-style-type: none;
+                line-height: 1.5;
+                margin: -8px 0 8px -24px;
+            }
+            fieldset {
+                margin-top: 16px;
+                padding: 0 16px 20px 8px;
+            }
+            div {
+                margin: 12px 0 0 1rem;
+            }
+            label {
+                display: block;
+            }
+            input + span {
+                margin-left: .25rem;
+            }
+            
+            /* Add an icon after external links */
+            a[href^='http']::after {
+                content: url(images/Icon_External_Link.png);
+                padding-left: 2px;
+            }
+            /* Invalid styles */
+            input:invalid {
+                background: lavenderblush;
+            }
+            input:invalid + span::after {
+                content: '✗';
+                color: red;
+            }
+            /* Valid styles */
+            input:valid {
+                background: palegreen;
+            }
+            input[type="email"]:valid + span::after {
+                content: '✓';
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Some Links</h3>
+        <ul>
+            <li><a href="example48.html/" target="_blank">::before Example</a>
+            <li><a href="example49.html/" target="_blank">::first-letter Example</a>
+            <li><a href="example50.html/" target="_blank">::first-line Example</a>
+            <li><a href="https://www.w3.org/TR/css-pseudo-4/#selectordef-after" target="_blank">CSS Standard for ::after</a>
+            <li><a href="https://validator.w3.org/" target="_blank">HTML Validator</a>
+            <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS Validator</a>
+        </ul>
+        <form>
+            <fieldset>
+                <legend>Subscribe (all fields required)</legend>
+            <div>
+                <label for="user-name">Name:</label>
+                <input id="user-name" 
+                       type="text"
+                       required>
+                <span></span>
+            </div>
+        
+            <div>
+                <label for="user-email">Email:</label>
+                <input id="user-email" 
+                       type="email" 
+                       placeholder="e.g., you@domain.com"
+                       required>
+                <span></span>
+            </div>
+            </fieldset>
+        </form>
+    </body>
+</html>

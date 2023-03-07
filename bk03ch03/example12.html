@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The :default Pseudo-Class</title>
+        <style>
+            body {
+                margin: 32px;
+                width: fit-content;
+            }
+            fieldset {
+                padding: 8px;
+            }
+            div,
+            button {
+                margin: .5rem 0 0 1rem;
+            }
+            input[type="radio"] {
+                margin-right: .5rem;
+            }
+            input[type="radio"]:default {
+               box-shadow: 0 0 5px 1px forestgreen;
+            }
+            input[type="radio"]:default + label {
+               color: forestgreen;
+            }
+            button:default {
+               box-shadow: 0 0 5px 1px darkblue;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>
+                    Select a delivery method
+                </legend>
+                <div>
+                    <input type="radio" id="carrier-pigeon" name="delivery" value="pigeon" checked>
+                    <label for="carrier-pigeon">Carrier pigeon</label>
+                </div>
+                <div>
+                    <input type="radio" id="pony-express" name="delivery" value="pony">
+                    <label for="pony-express">Pony express</label>
+                </div>
+                <div>
+                    <input type="radio" id="snail-mail" name="delivery" value="postal">
+                    <label for="snail-mail">Snail mail</label>
+                </div>
+                <div>
+                    <input type="radio" id="some-punk" name="delivery" value="bikecourier">
+                    <label for="some-punk">Some punk on a bike</label>
+                </div>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </fieldset>
+        </form>
+    </body>
+</html>

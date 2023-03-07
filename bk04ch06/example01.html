@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Iterating over a collection</title>
+    </head>
+    <body>
+        <div id="div1">
+            This, of course, is div 1.
+        </div>
+        <div id="div2">
+            Yeah, well <em>this</em> is div 2!
+        </div>
+        <div id="div3">
+            Ignore those dudes. Welcome to div 3!
+        </div>
+        <script>
+            const divs = document.getElementsByTagName("div");
+            for (const d of divs) {
+                console.log(d.id);
+            }
+        </script>
+    </body>
+</html>

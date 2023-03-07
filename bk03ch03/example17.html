@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The :optional Pseudo-Class</title>
+        <style>
+            body {
+                margin: 32px;
+                width: fit-content;
+            }
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body {
+                max-width: 25rem;
+                margin: 2rem;
+            }
+            div {
+                margin: .75rem 0 0 1rem;
+            }
+            label {
+                display: block;
+            }
+            button {
+                padding: .25rem;
+                border-radius: 5px;
+                margin: .75rem 0 0 1rem;
+                font-size: .8rem;
+            }
+            input:optional {
+                background: lightgoldenrodyellow;
+            }
+            input:required {
+                background: yellow;
+            }
+            input:optional + span::after {
+                content: ' (optional)';
+            }
+            input:required + span::after {
+                content: ' (required)';
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <div>
+                <label for="user-name">Name:</label>
+                <input id="user-name" 
+                       type="text"
+                       name="username"
+                       placeholder="Your name">
+                <span></span>
+            </div>
+            <div>
+                <label for="user-email">Email:</label>
+                <input id="user-email" 
+                       type="email" 
+                       name="useremail"
+                       placeholder="e.g., you@domain.com"
+                       required>
+                <span></span>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <script>
+        </script>
+    </body>
+</html>

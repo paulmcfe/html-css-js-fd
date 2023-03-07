@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The :focus Pseudo-Class</title>
+        <style>
+            body {
+                margin: 32px;
+                width: fit-content;
+            }
+            label {
+                display: block;
+                margin-top: 1rem;
+            }
+            input:focus {
+                background-color: lightsteelblue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Text Input Types</h1>
+        <form>
+            <label>
+                Text: <input type="text" name="company" size="50" >
+            </label>
+            <label>
+                Number: <input type="number" name="points" value="100">
+            </label>
+            <label>
+                Email: <input type="email" name="user-email" placeholder="you@yourdomain.com">
+            </label>
+            <label>
+                URL: <input type="url" name="homepage" placeholder="e.g., http://domain.com/">
+            </label>
+            <label>
+                Telephone: <input type="tel" name="mobile" placeholder="(xxx)xxx-xxxx">
+            </label>
+            <label>
+                Time: <input type="time" name="start-time">
+            </label>
+            <label>
+                Password: <input type="password" name="userpassword" autocomplete="current-password">
+            </label>
+            <label>
+                Search: <input type="search" name="q" placeholder="Type a search term">
+            </label>
+        </form>
+    </body>
+</html>

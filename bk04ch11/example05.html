@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Getting the checkbox state</title>
+        <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            } 
+            body {
+                max-width: 25rem;
+                margin: 1rem;
+            }
+            form {
+                margin-top: .75rem;
+            }            
+            label {
+                display: block;
+                margin: .5rem 0 0 1rem;
+            }            
+            input[type=checkbox] {
+                margin-right: .5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="settingsForm">
+            <fieldset>
+                <legend>
+                    Settings
+                </legend>
+                <label>
+                    <input id="autosave" type="checkbox" name="autosave" checked>
+                    Autosave this project
+                </label>
+                <label>
+                    <input id="usetabs" type="checkbox" name="usetabs">
+                    Use tabs instead of spaces
+                </label>
+            </fieldset>
+        </form>
+        <script>
+            let autoSaveCheckBox = document.querySelector('#autosave');
+            if (autoSaveCheckBox.checked) {
+                console.log(`${autoSaveCheckBox.name} is checked`);
+            } else {
+                console.log(`${autoSaveCheckBox.name} is unchecked`);
+            }
+            let useTabsCheckBox = document.querySelector('#usetabs');
+            if (useTabsCheckBox.checked) {
+                console.log(`${useTabsCheckBox.name} is checked`);
+            } else {
+                console.log(`${useTabsCheckBox.name} is unchecked`);
+            }
+        </script>
+    </body>
+</html>

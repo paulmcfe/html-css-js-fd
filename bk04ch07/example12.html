@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Returning a subset of an array: slice()</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+            div {
+                margin-top: .5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="output">
+        </div>
+
+        <script>
+            const myArray = ["A", "B", "C", "D", "E", "F"];
+            const array1 = myArray.slice(0, 4);
+            const array2 = myArray.slice(3);
+            const array3 = myArray.slice(-3, -1);
+            let str = "array1: " + array1 + "<br>";
+            str += "array2: " + array2 + "<br>";
+            str += "array3: " + array3;
+            document.getElementById('output').innerHTML = str;
+        </script>
+    </body>
+</html>

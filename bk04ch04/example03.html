@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Branching with if...else Statements</title>
+    </head>
+    <body>
+        <p id="result">
+        </p>
+        <script>
+            // Initialize the tax rate and total price
+            const taxRate = Number(prompt("Please enter the tax rate:", 0.1));
+            const totalPrice = Number(prompt("Please enter the total price:", 11.00));
+            
+            if (taxRate >= 0 && taxRate < 1) {
+                const retailPrice = totalPrice / (1 + taxRate);
+
+                // Write the result to the page
+                document.write("The retail price is $" + retailPrice);
+            } else {
+                document.write("Please enter a tax rate between 0 and 1.");
+            }
+
+        </script>
+    </body>
+</html>

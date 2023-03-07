@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Using while Loops</title>
+        <script>
+            let sum = 0;
+            let num = prompt("Type a number or click Cancel:", 1);
+            while (num != null) {
+                sum += Number(num);
+                num = prompt("Type a number or click Cancel:", 1);
+            }
+            document.write("The total of your numbers is " + sum);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

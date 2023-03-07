@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exiting a loop using the break statement</title>
+        <style>
+            body {
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            let sum = 0;
+            for (let counter = 1; counter <= 3; counter += 1) {
+                let num = prompt("Type a positive number:", 1);
+                if (num < 0) {
+                    sum = 0;
+                    break;
+                }
+                sum += Number(num);
+            }
+            if (sum > 0) {
+                document.write("The average of your numbers is " + sum / 3);
+            }
+        </script>
+    </body>
+</html>

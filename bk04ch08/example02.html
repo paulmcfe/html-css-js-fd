@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The indexOf() and lastIndexOf() methods</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+            div {
+                margin-top: .5em;
+            }
+        </style>
+    </head>
+    <body>
+        <pre>
+HTML, CSS, and JavaScript For Dummies
+0123456789012345678901234567890123456
+        </pre>
+        <div id="output">
+        </div>
+
+        <script>
+            const bookName = "HTML, CSS, and JavaScript For Dummies";
+            
+            let str = "\"C\" is at index " + bookName.indexOf("C") + "<br>";
+            str += "\"v\" is at index " + bookName.indexOf("v") + "<br>";
+            str += "The first space is at index " + bookName.indexOf(" ") + "<br>";
+            str += "The first \"S\" is at index " + bookName.indexOf("S") + "<br>";
+            str += "The last \"S\" is at index " + bookName.lastIndexOf("S") + "<br>";
+            str += "The first \"a\" after index 12 is at index " +  bookName.indexOf("a", 12) + "<br>";
+            str += "The substring \"Script\" begins at index " + bookName.indexOf("Script");
+            
+            document.getElementById("output").innerHTML = str;
+        </script>
+    </body>
+</html>

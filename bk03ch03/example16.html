@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The :invalid Pseudo-Class</title>
+        <style>
+            body {
+                margin: 32px;
+                max-width: 500px;
+            }
+            div {
+                margin: .75rem 0 0 1rem;
+            }
+            label {
+                display: block;
+            }
+            input + span {
+                margin-left: .25rem;
+            }
+            input:invalid {
+                background: lavenderblush;
+            }
+            input:valid {
+                background: palegreen;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <div>
+                <label for="user-name">Name:</label>
+                <input id="user-name" 
+                       type="text"
+                       required>
+                <span></span>
+            </div>
+        
+            <div>
+                <label for="user-email">Email:</label>
+                <input id="user-email" 
+                       type="email" 
+                       placeholder="e.g., you@domain.com"
+                       required>
+                <span></span>
+            </div>
+        </form>
+        <script>
+        </script>
+    </body>
+</html>

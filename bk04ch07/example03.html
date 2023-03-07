@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Populating an Array with Data</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+            div {
+                margin-top: .5em;
+            }
+            img {
+                width: 400px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="output">
+        </div>
+
+        <script>
+            // Declare the array
+            const dogPhotos = [];
+            
+            // Initialize the array values using a loop
+            for (let counter = 0; counter < 5; counter += 1) {
+                dogPhotos[counter] = "dog-" + (counter + 1);
+            }
+            
+            // Display an example
+            document.getElementById('output').innerHTML = '<img src="images/' + dogPhotos[0] + '.png" alt="">';
+        </script>
+    </body>
+</html>
