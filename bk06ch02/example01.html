@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Setting Up a Basic Transition</title>
+        <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        button {
+            background-image: linear-gradient(to bottom, hsl(100, 61%, 39%) 0%, hsl(100, 61%, 19%) 100%);
+            border-radius: 20px;
+            border-width: 0px;
+            color: hsl(0, 0%, 93%);
+            font-family: Verdana, sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 1.5px;
+            padding: 7px 30px 10px 30px;
+            transition-property: transform;
+            transition-duration: 1s;
+        }
+        button:hover {
+            transform: scale(2);
+        }
+        </style>
+    </head>
+    <body>
+        <button tabindex="0">Hover over me</button>
+    </body>
+</html>

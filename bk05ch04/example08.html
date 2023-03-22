@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Container Queries</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            body {
+                margin: 1rem;
+                line-height: 1.4;
+                font-size: 1.25rem;
+                padding: 0 1rem;
+                max-width: 50rem;
+            }
+            .resizeable {
+                margin-top: 1rem;
+                overflow: auto;
+                resize: horizontal;
+                width: 40rem;
+            }
+            img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+            .card-container {
+                container-type: inline-size;
+            }
+            .card-wrapper {
+                align-items: center;
+                background: hsl(210deg 50% 90%);
+                border-radius: 10px;
+                display: grid;
+                gap: 1.5rem;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto;
+                padding: 0 1rem 1rem 1rem;
+            }
+            .card-image {
+                min-width: auto;
+                height: auto;
+                object-fit: cover;
+                object-position: center;
+                overflow: hidden;
+            }
+            .card-title {
+                font-size: 2rem;
+                margin: 0.5rem 0;
+                text-align: left;
+            }
+            .card-description {
+                font-size: 1.25rem;
+                margin-bottom: 1rem;
+            }            
+            .card-actions {
+                display: flex;
+                gap: 1rem;
+                justify-content: flex-start;
+            }
+            .card-button {
+                border: 0;
+                border-radius: 8px;
+                color: hsl(0deg 0% 90%);
+                font-size: 1.25rem;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                padding: 0.5rem 0.75rem;
+            }            
+            .learn-more {
+                background-color: hsl(210deg 75% 25%);
+            }            
+            .add-to-cart {
+                background-color: hsl(108deg 75% 25%);
+            }
+            @container (width > 25rem) and (width < 35rem) {
+                .card-wrapper {
+                        grid-template-columns: auto;
+                        grid-template-rows: auto auto;
+                }
+                .card-image {
+                  width: 100%;
+                  height: 10rem;
+                }
+                .card-title {
+                    text-align: center;
+                }
+                .card-actions {
+                    justify-content: center;
+                }
+            }
+            @container (width < 25rem) {
+                .card-wrapper {
+                    align-items: center;
+                    display: block;
+                    padding: 1rem;
+                }            
+                .card-image {
+                    display: none;
+                }
+                .card-title {
+                    margin-top: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="resizeable">
+                <div class="card-container">
+                    <div class="card-wrapper">
+                        <img class="card-image" src="images/inflatable-dartboard.png" alt="Inflatable dartboard product photo">
+                        <div>
+                            <h3 class="card-title">Inflatable Dartboard</h3>
+                            <p class="card-description">
+                                Yes, it’s the world-famous inflatable dartboard! No hassle setup! Comes with an easy-to-use inflation tube. Just take a deep breath and blow. And blow. Keep going. Anyway, within a few hours, you’ll be ready to play darts. Now only $1,999! Patch kit sold separately.
+                            </p>
+                            <div class="card-actions">
+                                <button class="card-button learn-more">Learn more</button>
+                                <button class="card-button add-to-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

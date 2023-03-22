@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interrogating the Screen with Media Queries</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            body {
+                max-width: 60rem;
+                margin: 1rem;
+                font-size: 1.25rem;
+            }
+            a {
+                font-size: 1.25rem;
+            }
+            header {
+                margin-bottom: 1rem;
+            }
+            .site-logo {
+                float: left;
+                margin-right: 2rem;
+                height: auto;
+                width: 100px;
+            }
+            .subtitle {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+            nav {
+                border-bottom: 1px solid black;
+                border-top: 1px solid black;
+                display: flex;
+                margin: 1rem 0;
+                padding: 0.5rem 0;
+            }
+            nav > a {
+                padding-right: clamp(1rem, 2.5vw, 2rem);
+                text-decoration: none;
+            }
+            main {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2rem;
+                margin: 1rem 0;
+            }
+            article {
+                flex: 3;
+                min-width: 22rem;
+            }
+            aside {
+                background: hsl(0deg 0% 90%);
+                flex: 1;
+                min-width: 16rem;
+                padding: 0.75rem;
+            }
+            h3 {
+                margin-bottom: 1rem;
+            }
+            p:not(.subtitle) {
+                margin-bottom: 1rem;
+            }
+            footer {
+                border-top: 1px solid black;
+                padding: 1rem 0;
+            }
+            footer a {
+                margin-right: 1rem;
+                text-decoration:  none;
+            }
+            .social-icon {
+                margin-right: .5rem;
+                vertical-align: middle;
+            }
+            @media (max-width: 40rem) {
+                .site-logo {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="images/notw.png" alt="News of the Word logo" class="site-logo">
+            <h1>News of the Word</h1>
+            <p class="subtitle">Language news you won’t find anywhere else (for good reason!)</p>
+        </header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Away</a>
+            <a href="#">New</a>
+            <a href="#">Old</a>
+            <a href="#">About</a>
+            <a href="#">Exact</a>
+        </nav>        
+        <main>
+            <article>
+                <header>
+                    <h2>Irate Grammarians Will See <em>You</em> in Court, Mister!</h2>
+                </header>
+                <p>KALAMAZOO, Michigan—A group of disgruntled grammarians calling themselves “Mad, We Are, As Hell” has filed a number of civil lawsuits over the past few weeks. The targets of these suits are writers, raconteurs, and professional man-in-the-street interviewees who, they claim, are inveterate violators of the rules of grammar.</p>
+                
+                <p>The group’s spokesperson, Millicent Peevish, Head Shusher at the Kalamazoo District Library, said the grammarians could no longer sit back and allow “the splitting of blameless infinitives and the ending of sentences with evil, evil prepositions.” A previous campaign — called Shock and Appalled — that focused on writing testy letters to the editors of various local publications, had no discernible effect.</p>
+                
+                <p>One defendant is the essayist and dry-cleaning critic Boris Langenshortevitch, whom the grammarians describe as a “monster” who “brazenly and redundantly uses ‘the hoi polloi’, when any fool with half a brain knows that ‘hoi’ is the old Greek word for ‘the.’ Duh!” Edna Doright, Chief Comma Officer at Scribner’s, defended the suit. “Without an appreciation for ancient Greek, we as a society are lost,” she said. For his part, Mr. Langenshortevitch is unrepentant. “I won’t change the way I write but, to be quite honest, these grammar fundamentalists scare the bejeezus out of me,” he said.</p>
+                
+                <p>When asked if litigation was the appropriate response to these alleged grammar violations, Harvey Earnest, president of the Center for Subject-Verb Agreement, was adamant. “My God,” he said, “there are people out there wantonly dangling participles and starting sentences with conjunctions. Where will all this madness lead us if we do not do something to stop it?”</p>
+            </article>
+            <aside>
+                <h3>Related Stories</h3>
+                <p>It’s Official: Teen Instant Messages Nothing But Gibberish</p>
+                <p>Judge Issues Warrant for the Arrest of “OUGH”</p>
+                <p>New Mayor Mandates Smiley Faces in Place of Dots Over the Letter “i”</p>
+                <p>Opposite Senses of the Word “Oversight” File for Divorce</p>
+                <p>Scientists Discover Elusive Soup-Nuts Continuum</p>
+                <p>Teen Boy’s Vocabulary Down to a Single Word</p>
+                <p>UN Establishes Vowel Relief Fund</p>
+            </aside>
+        </main>
+        
+        <footer>
+            <a href="https://facebook.com/"><img src="images/facebook.png" class="social-icon" alt="Facebook logo">Facebook</a>
+            <a href="https://twitter.com/"><img src="images/twitter.png" class="social-icon" alt="Twitter logo">Twitter</a>
+            <a href="https://instagram.com/"><img src="images/instagram.png" class="social-icon" alt="Instagram logo">Instagram</a>
+            <a href="http://www.hbo.com/silicon-valley"><img src="images/hooli.png" class="social-icon" alt="Hooli logo">Hooli</a>
+        </footer>
+    </body>
+</html>

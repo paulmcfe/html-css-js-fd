@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Scaling an element</title>
+        <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            margin: 2rem;
+        }
+        nav > ul {
+            display: flex;
+            gap: 2rem;
+        }
+        nav li {
+            background-image: linear-gradient(to bottom, hsl(100, 50%, 60%) 0%, hsl(100, 50%, 20%) 100%);
+            border-radius: 1rem;
+            display: inline-block;
+            padding: 0 3rem 0.6rem 3rem;
+            transition: transform 1s cubic-bezier(.33,.48,.16,1.52);
+        }
+        nav li > a {
+            color: hsl(0, 0%, 100%);
+            font-family: Tahoma, sans-serif;
+            font-size: 1.75rem;
+            font-variant: small-caps;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+        nav li:hover,
+        nav li:has(a:focus) {
+            transform: scale(1.2);
+        }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="">home</a></li>
+                <li><a href="">products</a></li>
+                <li><a href="">blog</a></li>
+                <li><a href="">support</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>

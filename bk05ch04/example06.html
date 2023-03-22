@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Your Best Fluid Friend: clamp())</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            body {
+                margin: 1.25vmax;
+                font-size: clamp(1.25rem, 0.75rem + 1vmax, 1.75rem);
+            }
+            header {
+                padding-left: 1vmax;
+            }
+            .h1 {
+                font-size: clamp(2rem, 0.75rem + 1vmax, 3rem);
+            }
+            .subtitle {
+                font-size: clamp(1.5rem, 0.75rem + 1vmax, 2rem);
+                font-weight: bold;
+                margin: 1.25vmax 0 2.5vmax 0;
+            }
+            main {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+                column-gap: 2vw;
+                row-gap: 2vh;
+            }
+            main > p:nth-child(even) {
+                background: hsl(208deg 50% 80%);
+            }
+            p:not(.subtitle) {
+                border-radius: 15px;
+                padding: 1vmax;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>The Vibrant Edges of Language</h1>
+            <p class="subtitle">In which our intrepid writers let loose with talk of word play in all its forms</p>
+        </header>
+        <main>
+            <p>
+            We have a deep-rooted delight in the comic effect of words in English, and not just in advertising jingles but at the highest level of endeavor. <br>—BILL BRYSON, <i>The Mother Tongue</i>, 1990
+            </p><p>
+            Jubilance is an explanation for a lot of the things that happen in language. <br>—ALLEN WALKER READ, quoted in "At Play in the Language," by Michelle Stacy, <i>The New Yorker</i>, September 4, 1989
+            </p><p>
+            The deep and unconscious delight in language is one of the marks of difference between advantage and deprivation; the deprived child is deprived of joy. <br>—ANDREW WILKINSON, <i>The Foundations of Language</i>, 1971
+            </p><p>
+            Hackers, as a rule, love wordplay and are very conscious and inventive in their use of language. <br>—ERIC RAYMOND, <i>The New Hackers Dictionary</i>, 1991
+            </p><p>
+            Everyone plays with language or responds to language play. Some take mild pleasure from it; others are totally obsessed by it; but no one can avoid it. <br>—DAVID CRYSTAL, <i>Language Play</i>, 1998
+            </p><p>
+            Comedy: The least controllable use of language and therefore the most threatening to people in power. <br>—JOHN RALSTON SAUL, <i>The Doubter’s Companion</i>, 1994
+            </p><p>
+            There’s a helluva distance between wisecracking and wit. Wit has truth in it; wisecracking is simply calisthenics with words. <br>—DOROTHY PARKER, “Interview,” <i>Writers at Work</i>, 1958
+            </p><p>
+            Blows are sarcasms turned stupid: wit is a form of force that leaves the limbs at rest. <br>—GEORGE ELIOT, <i>Felix Holt, The Radical</i>, 1866
+            </p><p>
+            Those who talk on the razor-edge of double-meanings pluck the rarest blooms from the precipice on either side. <br>—LOGAN PEARSALL SMITH, <i>Afterthoughts</i>, 1931
+            </p><p>
+            Wit is educated insolence. <br>—ARISTOTLE, <i>The Art of Rhetoric</i>, 4th century B.C.
+            </p><p>
+            Jokes are grievances. <br>—MARSHALL MCLUHAN, “Speech to the American Booksellers Association,” June 7, 1969
+            </p><p>
+            Impropriety is the soul of wit. <br>—W. SOMERSET MAUGHAM, <i>The Moon and Sixpence</i>, 1919
+            </p><p>
+            Finding the inappropriate word — the device upon which irony depends. <br>—JOHN CAREY, <i>The Violent Effigy</i>, 1973
+            </p><p>
+            We should begin by looking. And the place to begin is not in the stolid center but at the vibrant edges of language — among the bilingual, the flouters of convention, the daring, the young — not at the middle of the road, where all the traffic flows, but on the verge, where boundaries form and shift. <br>—RICHARD W. BAILEY, “Language at the Edges,” <i>American Speech 75.4</i>, Winter 2000
+            </p><p>
+            I would say that the dislike, the fear sometimes, of wordplay tells us a good deal, as do attitudes towards the human body, about puritanism. Of such sniffers at words, such misologists, we might say that their imaginations are nasty, British, and short. <br>—WALTER REDFERN, <i>Puns</i>, 1984
+            </p><p>
+            A difference of taste in jokes is a great strain on the affections. <br>—GEORGE ELIOT, <i>Daniel Deronda</i>, 1876
+            </p>
+        </main>
+    </body>
+</html>

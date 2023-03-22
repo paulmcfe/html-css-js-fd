@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Setting Up a Basic Animation (to and from)</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                align-items: start;
+                background-color: hsl(210deg 60% 80%);
+                height: 100vh;
+            }
+            nav {
+                text-align: center;
+                background: hsl(90deg 60% 80%);
+                color: hsl(330deg 60% 40%);
+                font-size: 1.25rem;
+                height: 100%;
+                padding-top: 1rem;
+                width: 150px;
+                animation-name: fade-and-slide-in;
+                animation-duration: 1.5s;
+                animation-timing-function: ease-out;
+            }
+            @keyframes fade-and-slide-in {
+                from {
+                    opacity: 0;
+                    transform: translateX(-100%);
+                }
+                to {
+                    opacity: 100%;
+                    transform: translateX(0%);
+                } 
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            Hello world!
+        </nav>
+    </body>
+</html>

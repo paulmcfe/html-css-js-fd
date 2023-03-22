@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Playing around with the transform origin</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background-color: hsl(55deg 67% 80%);
+                display: flex;
+                height: 100vh;
+                justify-content: center;
+                margin-top: 2rem;
+                width: 100vw;
+            }        
+            .canvas {
+                color: hsl(257deg 36% 48%);
+                font-family: Georgia, serif;
+                font-size: 8vw;
+                letter-spacing: .15em;
+            }
+            .layer {
+                position: relative;
+                display: inline-block;
+            }
+            .dangling {
+                transform: rotate(90deg);
+                transform-origin: -0.1em 0.9em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="canvas">
+            <span class="layer">DANG</span><span class="dangling layer">LING</span>
+        </div>
+    </body>
+</html>

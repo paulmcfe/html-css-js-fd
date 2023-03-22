@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Rotating an element</title>
+        <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            margin: 2rem;
+        }
+        header {
+            display: flex;
+            align-items: center;
+        }
+        h1 {
+            background: transparent;
+            color: hsl(100deg 40% 60%);
+            font-family: Tahoma, sans-serif;
+            font-size: clamp(1.5rem, 0.2rem + 4.8vw, 5rem);
+            font-variant: small-caps;
+            letter-spacing: 1.5px;
+            padding-left: 0.5rem;
+            position: relative;
+        }
+        h1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: clamp(2rem, 1.5rem + 5vw, 8rem);
+            width: clamp(2rem, 1.5rem + 5vw, 8rem);
+            background-image: linear-gradient(to bottom right, hsl(208deg 50% 70%) 0%, hsl(208deg 50% 40%) 100%);
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to my web page!</h1>
+        </header>
+    </body>
+</html>

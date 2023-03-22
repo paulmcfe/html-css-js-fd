@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Skewing an element</title>
+        <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            margin: 2rem;
+        }
+        nav > ul {
+            display: flex;
+            gap: 1rem;
+        }
+            nav li {
+                background: transparent;
+                display: inline-block;
+                padding: 0 3rem 0.75rem 3rem;
+                position: relative;
+            }
+            nav li > a {
+                color: hsl(0, 0%, 100%);
+                font-family: Tahoma, sans-serif;
+                font-size: 1.75rem;
+                font-variant: small-caps;
+                letter-spacing: 2px;
+                text-decoration: none;
+            }
+            nav li::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-image: linear-gradient(to bottom, hsl(208, 50%, 60%) 0%, hsl(208, 50%, 20%) 100%);
+                transform: skew(45deg);
+                z-index: -1;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="">home</a></li>
+                <li><a href="">products</a></li>
+                <li><a href="">blog</a></li>
+                <li><a href="">support</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>

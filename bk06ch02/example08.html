@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Using code to trigger a transition</title>
+        <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background: hsl(240deg 50% 80%);
+            padding: 1rem 0;
+        }
+        .nav-menu-button {
+            background: transparent;
+            border: 1px solid; 
+            border-radius: 5px;
+            font-size: 1.5rem;
+            margin-left: 1rem;
+            padding: 0.5rem;
+        }
+        .nav-menu-button::after {
+            content: '\025be';
+        }
+        .nav-menu-button:focus {
+            outline: 2px dashed hsl(240deg 50% 20%);
+        }
+        .nav-menu-button:active {
+            transform: translate(2px, 2px);
+        }
+        .nav-menu-dropdown-contents {
+            background: hsl(240deg 50% 80%);
+            border-radius: 4px;
+            height: 0;
+            left: 0;
+            margin-left: 0.25rem;
+            max-height: 200px;
+            opacity: 0;
+            overflow: auto;
+            padding: 0.5rem;
+            position: absolute;
+            top: 75px;
+            transition: all 0.75s ease-out;
+            width: fit-content;  
+        }
+        .nav-menu-dropdown-contents.show {
+            height: fit-content;
+            opacity: 1;   
+        }
+        .nav-menu-dropdown-contents > a,
+        .nav-menu-dropdown-contents > a:visited {
+            display: block;
+            border-radius: 5px;
+            font-size: 1.25rem;
+            padding: 4px 8px;
+            text-decoration: none;
+        }        
+        .nav-menu-dropdown-contents > a:hover {
+            background: hsl(240deg 50% 20%);
+            color: hsl(240deg 50% 90%);
+        }
+        </style>
+        </head>
+        <body>
+        <nav>
+            <button class="nav-menu-button" tabindex="0">
+                Menu
+            </button>
+            <div class="nav-menu-dropdown-contents">
+                <a href="" class="dropdown-contents-link">Home</a>
+                <a href="" class="dropdown-contents-link">Products</a>
+                <a href="" class="dropdown-contents-link">Blog</a>
+                <a href="" class="dropdown-contents-link">Contact</a>
+            </div>
+        </nav>
+        <script>
+            // Get the Menu button
+            const menuButton = document.querySelector('.nav-menu-button');
+        
+            // Listen for clicks on the Menu button
+            menuButton.addEventListener('click', () => {
+                
+                // Get the dropdown
+                const menuDropdownList = document.querySelector('.nav-menu-dropdown-contents');
+            
+                // Transition the dropdown by toggling the 'show' class
+                menuDropdownList.classList.toggle('show');
+                
+                // Make the dropdown accessible
+                if (menuDropdownList.classList.contains('show')) {
+                    menuDropdownList.setAttribute('aria-expanded', 'true');                    
+                } else {
+                    menuDropdownList.setAttribute('aria-expanded', 'false');                    
+                }
+            });
+        </script>
+    </body>
+</html>

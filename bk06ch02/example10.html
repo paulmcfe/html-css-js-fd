@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Accessible transitions: Storing a user preference</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            /*
+             * To run a grid-based transition, you need to add the
+             * transition property to the grid container (body, in this case)
+             */
+            body {
+                display: grid;
+                grid-template-columns: 30px 1fr;
+                grid-template-rows: 60px 1fr 50px;
+                grid-template-areas: 
+                    'nav header'
+                    'nav main'
+                    'nav footer';
+                height: 100vh;
+                transition: 1s ease-in-out;
+            }
+            nav {
+                background: hsl(240deg 60% 80%);
+                grid-area: nav;
+                padding: 1rem 0;
+            }
+            /*
+             * The 'expand-menu' class is used to trigger the column transition
+             */
+            .expand-menu {
+                grid-template-columns: 200px 1fr;
+            }
+            header {
+                background: hsl(209deg 60% 80%);
+                grid-area: header;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                padding: 1rem;
+            }
+            main {
+                grid-area: main;
+            }
+            footer {
+                background: hsl(179deg 60% 80%);
+                grid-area: footer;
+            }
+            /*
+             * The next few classes define a classic 'hamburger' menu
+             * For a detailed explanation of this code, see https://webdevworkshop.io/code/hamburger-icon/
+             */
+            .hamburger {
+                cursor: pointer;
+                padding-left: 3px;
+                width: 25px;
+            }
+            .hamburger-line {
+                background-color: black;
+                height: 4px;
+                margin-top: 4px;
+                transition: opacity .5s ease-in, transform .5s ease-out;
+            }
+            .hamburger-line:first-child.active {
+                transform: rotate(45deg) translate(6px, 6px);
+            }
+            .hamburger-line:nth-child(2).active {
+                opacity: 0;
+            }
+            .hamburger-line:last-child.active {
+                transform: rotate(-45deg) translate(5px, -5.5px);
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="hamburger" role="button" tabindex="0" aria-label="Menu">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </div>
+        </nav>
+        <header>
+            <form>
+                <input type="checkbox" id="animation-preference">
+                <label for="animation-preference">Reduce animation effects</label>
+            </form>
+        </header>
+        <main>
+        </main>
+        <footer>
+        </footer>
+        <script>
+            // Get the user's stored preference for reduced animation
+            let reduceAnimation = JSON.parse(localStorage.getItem('reduce-animation'));
+            
+            // If storage returned null, no preference has been set, so use 'false' for now
+            if (reduceAnimation === null) {
+                reduceAnimation = false;
+            }
+            
+            // Initialize the checkbox to the same state as the user's preference
+            const animationPreference = document.querySelector('#animation-preference');
+            animationPreference.checked = reduceAnimation;
+            
+            // Get a reference to the element with the 'hamburger' class
+            const hamburgerButton = document.querySelector('.hamburger');
+            
+            // Listen for clicks on the hamburger button
+            hamburgerButton.addEventListener('click', runAnimation);
+
+            // Listen for pressing Enter (keyCode=13) or spacebar (keyCode=32) on the hamburger button
+            hamburgerButton.addEventListener('keypress', (event) => {
+                if(event.keyCode === 13 || event.keyCode === 32) {
+                    runAnimation();
+                }
+            });
+                
+            function runAnimation() {
+                // Get a reference to all the hamburger lines
+                const hamburgerLines = Array.from(document.querySelectorAll('.hamburger-line'));
+                
+                // Run through each line, toggling the 'active' class to trigger the transition
+                hamburgerLines.forEach(hamburgerLine => {
+                    // Does the user prefer reduced animation?
+                    if (reduceAnimation) {
+                        // If so, make the duration as short as possible
+                        hamburgerLine.style.transitionDuration = '0.01ms';
+                    } else {
+                        // Otherwise, reset the duration
+                        hamburgerLine.style.transitionDuration = '0.5s';
+                    }
+                    // Toggle the 'active' class to trigger the transition
+                    hamburgerLine.classList.toggle('active');
+                });
+                
+                // Trigger the nav column transition
+                const container = document.querySelector('body');
+                // Does the user prefer reduced animation?
+                if (reduceAnimation) {
+                    // If so, make the duration as short as possible
+                    container.style.transitionDuration = '0.01ms';
+                } else {
+                    // Otherwise, reset the duration
+                    container.style.transitionDuration = '1s';
+                }
+                // Toggle the 'expand-menu' class to trigger the transition
+                container.classList.toggle('expand-menu');
+            }
+            
+            // Listen for changes to the check box
+            animationPreference.addEventListener('change', () => {
+                // Check the checkbox value
+                if(animationPreference.checked) {
+                    // If it's checked, update the global variable to true
+                    reduceAnimation = true;
+                    // Add the preference to local storage
+                    localStorage.setItem('reduce-animation', true);
+                } else {
+                    // If it's not checked, update the global variable to false
+                    reduceAnimation = false;
+                    // Add the preference to local storage
+                    localStorage.setItem('reduce-animation', false);
+                }
+            });
+        </script>
+    </body>
+</html>

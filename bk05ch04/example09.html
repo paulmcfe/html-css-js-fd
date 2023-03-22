@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Delivering images responsively</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            body {
+                margin: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="images/img-small.jpg" alt=""
+            sizes="(max-width: 600px) 90vw,
+                   (max-width: 1000px) 60vw, 
+                    30vw"
+            srcset="images/img-small.jpg 450w,
+                    images/img-small.jpg 900w,
+                    images/img-small.jpg 1350w">
+    </body>
+</html>

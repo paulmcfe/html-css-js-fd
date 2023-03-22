@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Setting Up a Basic Transition</title>
+        <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: grid;
+            justify-content: center;
+            align-items: start;
+            height: 100vh;
+        }
+        .ball {
+            background: hsl(180, 75%, 60%);
+            border-radius: 50%;
+            color: hsl(0, 0%, 10%);
+            display: flex;
+            font-family: Verdana, sans-serif;
+            font-size: 1.25rem;
+            height: 10rem;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition-property: transform;
+            transition-duration: 1.5s;
+            transition-timing-function: cubic-bezier(0.5, 0.96, 0.75, 1.44);
+            width: 10rem;
+        }
+        .ball:focus {
+            transform: translateY(calc(100vh - 10rem));
+        }
+        </style>
+        </head>
+        <body>
+        <div class="ball" tabindex="0">Click me</div>
+    </body>
+</html>
