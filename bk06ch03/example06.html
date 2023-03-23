@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Triggering an animation with JavaScript</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                margin: 2rem;
+                font-size: 1.25rem;
+            }
+            input[type="email"] {
+                border: 1px solid black;
+                font-size: 1.25rem;
+            }
+            .alert {
+                animation-name: invalid-alert;
+                animation-duration: 100ms;
+                animation-iteration-count: 3;
+                animation-direction: alternate;
+            }
+            @keyframes invalid-alert {
+                from {
+                    translate: -2px -1px;
+                    rotate: none;
+                }
+                50% {
+                    translate: 0px 0px;
+                    rotate: -1deg;
+                }
+                to {
+                    translate: 2px 1px;
+                    rotate: 1deg;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <label for="email">Email address:</label>
+        <input id="email" type="email">
+
+        <script>
+            // Get a reference to the email input element
+            const email = document.querySelector('input[type="email"]');
+            
+            // Listen for the element losing the focus
+            email.addEventListener('focusout', () => {
+                // Does the input contain an invalid email address?
+                if(!email.validity.valid) {
+                    // If so, add the 'alert' class to the input
+                    email.classList.add('alert');
+                }
+            });
+            
+            // Listen for the end of the animation
+            email.addEventListener('animationend', () => {
+                // Put the focus back on the input
+                email.focus();
+                
+                // Remove the 'alert' class
+                email.classList.remove('alert');           
+            });
+        </script>
+    </body>
+</html>

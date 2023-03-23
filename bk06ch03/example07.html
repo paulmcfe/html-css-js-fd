@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Triggering animation-play-state with JavaScript</title>
+        <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            margin: 2rem;
+            font-size: 1.25rem;
+        }
+        button {
+            animation-name: push-button;
+            animation-duration: 100ms;
+            animation-play-state: paused;
+            background-image: linear-gradient(to bottom, hsl(0deg 68% 50%) 0%, hsl(0deg 68% 30%) 100%);
+            border-radius: 0.5rem;
+            border: 0px double hsl(0deg 0% 70%);
+            color: hsl(0deg 0% 90%);
+            font-family: Tahoma, sans-serif;
+            font-size: 1.25rem;
+            letter-spacing: 1.5px;
+            padding: 0.75rem 3rem;
+        }
+        .acknowledgement {
+            animation-name: acknowledge-click;
+            animation-duration: 5s;
+            animation-play-state: paused;
+            animation-timing-function: cubic-bezier(0, 1.15, 0.06, 1.3);
+            color: hsl(100, 50%, 30%);
+            display: inline-block;
+            font-size: 2rem;
+            margin-left: 0.5rem;
+            opacity: 0%;
+        }
+        @keyframes push-button {
+            to {
+                transform: translate(2px, 2px);    
+            }
+        }
+        @keyframes acknowledge-click {
+            from {
+                transform: scale(0.5);
+        }
+            to {
+                opacity: 100%;
+                transform: scale(1);
+            }
+        }
+
+        </style>
+    </head>
+    <body>
+        <button type="button">Click me!</button> <span class="acknowledgement">✓</span>
+        <script>
+            // Get a reference to the button element
+            const btn = document.querySelector('button');
+            
+            // Get a reference to the span element
+            const ack = document.querySelector('.acknowledgement');
+            
+            // Listen for a click on the button
+            // Note: This only works once; to click again, reload the page
+            btn.addEventListener('click', () => {
+                // Trigger the button animation by changing its animation-play-state to 'running'
+                btn.style.animationPlayState = 'running';
+            });
+            // Listen for the end of the button animation
+            btn.addEventListener('animationend', () => {
+                // Trigger the span animation by changing its animation-play-state to 'running'
+                ack.style.animationPlayState = 'running';
+            });
+        </script>
+    </body>
+</html>

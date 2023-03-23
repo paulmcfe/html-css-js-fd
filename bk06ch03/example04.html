@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Setting Up a Basic Animation (to Only)</title>
+        <title>Customizing the Animation</title>
         <style>
             * {
                 box-sizing: border-box;
@@ -14,34 +14,42 @@
                 background-color: hsl(210deg 60% 80%);
                 display: grid;
                 justify-content: center;
-                align-items: center;
                 height: 100vh;
             }
-            .box {
+            .ball {
                 align-items: center;
-                animation-name: rotate-it;
-                animation-delay: 0s;
-                animation-duration: 1s;
-                animation-timing-function: ease-in-out;
+                animation-name: bounce-it;
+                animation-direction: alternate;
+                animation-delay: 1s;
+                animation-duration: 0.75s;
+                animation-iteration-count: infinite;
+                animation-play-state: running;
+                animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
                 background: hsl(75deg 100% 90%);
+                border-radius: 50%;
                 color: hsl(0, 0%, 10%);
                 display: flex;
                 font-family: Verdana, sans-serif;
                 font-size: 1.25rem;
-                height: 12rem;
+                height: 10rem;
                 justify-content: center;
                 letter-spacing: 1.5px;
+                margin-top: 1rem;
                 text-transform: uppercase;
-                width: 12rem;
+                width: 10rem;
             }
-            @keyframes rotate-it {
+            .ball:hover {
+                animation-play-state: paused;
+            }
+            @keyframes bounce-it {
                 to {
-                    rotate: 1440deg;
+                    translate: 0 calc(100vh - 8.5rem);
+                    scale: .8 1.25;
                 }
             }
         </style>
     </head>
     <body>
-        <div class="box">Hello World!</div>
+        <div class="ball"></div>
     </body>
 </html>

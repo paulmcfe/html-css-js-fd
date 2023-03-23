@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interrogating the Screen with Media Queries</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            body {
+                max-width: 60rem;
+                margin: 1rem;
+                font-size: 1.25rem;
+            }
+            header {
+                animation-name: slide-in-with-skew;
+                animation-duration: 2s;
+                animation-timing-function: cubic-bezier(0.3, 0.6, 0.5, 1.4);
+                margin-bottom: 1rem;
+            }
+            .site-logo {
+                float: left;
+                margin-right: 2rem;
+                height: auto;
+                width: 100px;
+            }
+            .subtitle {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+            @keyframes slide-in-with-skew {
+                from {
+                    translate: 100% 0%;
+                    transform: skewX(-45deg);
+                }
+                75% {
+                    transform: skewX(0);
+                }
+                to {
+                    translate: 0%);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="images/notw.png" alt="News of the Word logo" class="site-logo">
+            <h1>News of the Word</h1>
+            <p class="subtitle">Language news you won’t find anywhere else (for good reason!)</p>
+        </header>
+    </body>
+</html>

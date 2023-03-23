@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Setting Up a Basic Animation (to Only)</title>
+        <title>Triggering an animation with a pseudo-class</title>
         <style>
             * {
                 box-sizing: border-box;
@@ -19,10 +19,6 @@
             }
             .box {
                 align-items: center;
-                animation-name: rotate-it;
-                animation-delay: 0s;
-                animation-duration: 1s;
-                animation-timing-function: ease-in-out;
                 background: hsl(75deg 100% 90%);
                 color: hsl(0, 0%, 10%);
                 display: flex;
@@ -34,9 +30,16 @@
                 text-transform: uppercase;
                 width: 12rem;
             }
+            .box:hover {
+                animation-name: rotate-it;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+            }
             @keyframes rotate-it {
                 to {
                     rotate: 1440deg;
+                    border-radius: 50%;
                 }
             }
         </style>
