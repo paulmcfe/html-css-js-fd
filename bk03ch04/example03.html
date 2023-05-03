@@ -9,27 +9,19 @@
                 margin: 16px;
             }
             section {
-                color: navy;
+                border: 3px solid black;
             }
-            h3 {
-                color: green;
-            }
-            aside > h3 {
-                color: inherit;
+            p, code {
+                /* Using the inherit value to override the 
+                   default non-inheritance of the border property */
+                border: inherit;
             }
         </style>
     </head>
     <body>
         <section>
-            <h3>All About Dolphins</h3>
             <p>
-                Welcome to All About Dolphins!
-            </p>
-            <aside>
-                <h3>Did You Know?</h3>
-                <p>
-                    Dolphins can sleep with one eye open to watch for predators.
-                </p>
+                What if the <code>border</code> property inherited?
             </p>
         </section>
     </body>
