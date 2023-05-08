@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Using the OR (||) operator</title>
+    </head>
+    <body>
+        <script>
+            const hasFever = true;
+            const hasCough = false;
+            const missSchool = hasFever || hasCough;
+            document.write("Misses school? " + missSchool);
+
+            const salesOverBudget = false;
+            const expensesUnderBudget = false;
+            const getsBonus = salesOverBudget || expensesUnderBudget;
+            document.write("<br>Gets a bonus? " + getsBonus);
+        </script>
+    </body>
+</html>

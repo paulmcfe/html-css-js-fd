@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Using the AND (&&) operator</title>
+    </head>
+    <body>
+        <script>
+            const finishedDinner = true;
+            const clearedTable = true;
+            const getsDessert = finishedDinner && clearedTable;
+            document.write("Gets dessert? " + getsDessert);
+
+            const haveWallet = true;
+            const haveKeys = false;
+            const canGoOut = haveWallet && haveKeys;
+            document.write("<br>Can go out? " + canGoOut);
+        </script>
+    </body>
+</html>
