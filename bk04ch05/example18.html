@@ -15,6 +15,7 @@
         const profitSharingPercent = 0.1;
         const grossProfit = 100000;
         let netProfit;
+        let counter = 0;
         
         // Here's the initial guess
         let profitSharing = grossProfit * profitSharingPercent;
@@ -22,7 +23,7 @@
         calculateProfitSharing(profitSharing);
         
         function calculateProfitSharing(guess) {
-        
+        counter++;
             // First, calculate the new net profit
             netProfit = grossProfit - guess;
         
@@ -32,6 +33,7 @@
             // Do we have a solution?
             if ((netProfit + profitSharing) != grossProfit) {
                 // If not, plug it in again
+                if (counter < 6)
                 calculateProfitSharing(profitSharing);
             }
         }
@@ -39,6 +41,7 @@
         document.write("Gross Profit: " + grossProfit + 
             "<br>Net Profit: " + netProfit + 
             "<br>Profit Sharing: " + profitSharing);
+            document.write("<br>Counter:" + counter);
     </script>
 </body>
 </html>
