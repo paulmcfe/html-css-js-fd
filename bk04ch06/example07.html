@@ -1,34 +1,21 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <title>Getting data about the event</title>
-        <style>
-            body {
-                margin: 1em;
-                font-size: 1.5em;
-            }
-            div {
-                margin-top: .5em;
-            }
-        </style>
+        <title>So Many Kale Recipes</title>
     </head>
     <body>
-        <div>
-            Type a key:
-        </div>
-        <input id="key-input" type="text">
-        <div>
-            Here's the code of the key you pressed:
-        </div>
-        <div id="key-output"> 
-        </div>
+        <header id="page-banner">
+            <h1>Above and Beyond the Kale of Duty</h1>
+        </header>
+        <main id="page-content">
+            <p>
+                Do you love to cook with <a href="kale.html">kale</a>?
+            </p>
+        </main>
         <script>
-            const keyInput = document.getElementById('key-input');
-            keyInput.addEventListener('keypress', function(e) {
-                const keyOutput = document.getElementById('key-output');
-                keyOutput.innerHTML = e.which;
-            });
+            const childElement = document.querySelector("h1");
+            const parentElement = childElement.parentNode;
+            console.log(parentElement);
         </script>
     </body>
 </html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Setting up an event handler</title>
+    </head>
+    <body>
+        <div id="my-div"></div>
+        <button id="my-button">Click to add some text, above</button>
+        <script>
+            const myButton = document.getElementById('my-button');
+            myButton.addEventListener('click', function() {
+                const myDiv = document.getElementById('my-div');
+                myDiv.innerHTML = '<h1>Hello Click World!</h1>';
+            });
+        </script>
+    </body>
+</html>

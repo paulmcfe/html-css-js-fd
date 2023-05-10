@@ -1,34 +1,21 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <title>Preventing the default event action</title>
-        <style>
-            body {
-                margin: 1em;
-                font-size: 1.5em;
-            }
-            div {
-                margin-top: .5em;
-            }
-        </style>
+        <title>So Many Kale Recipes</title>
     </head>
     <body>
-        <a href="https://wiley.com/">Wiley</a><br>
-        <a href="https://262.ecma-international.org/6.0/">ECMAScript 2015 Spec</a><br>
-        <a href="https://webdev.mcfedries.com/tools/workbench/">WebDev Workbench</a>
-        <div id="output">
-            Link URL:
-        <div>
+        <header id="page-banner">
+            <h1>Above and Beyond the Kale of Duty</h1>
+        </header>
+        <main id="page-content">
+            <p>
+                Do you love to cook with <a href="kale.html">kale</a>?
+            </p>
+        </main>
         <script>
-            const links = document.getElementsByTagName('a')
-            for (const link of links) {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    strURL = e.target.href;
-                    document.getElementById('output').innerHTML = 'Link URL: ' + strURL;
-                })
-            }
+            const currElement = document.querySelector("main");
+            const prevSib = currElement.previousElementSibling;
+            console.log(prevSib);
         </script>
     </body>
 </html>

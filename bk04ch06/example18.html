@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Preventing the default event action</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+            div {
+                margin-top: .5em;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="https://wiley.com/">Wiley</a><br>
+        <a href="https://262.ecma-international.org/6.0/">ECMAScript 2015 Spec</a><br>
+        <a href="https://webdev.mcfedries.com/tools/workbench/">WebDev Workbench</a>
+        <div id="output">
+            Link URL:
+        <div>
+        <script>
+            const links = document.getElementsByTagName('a')
+            for (const link of links) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    strURL = e.target.href;
+                    document.getElementById('output').innerHTML = 'Link URL: ' + strURL;
+                })
+            }
+        </script>
+    </body>
+</html>

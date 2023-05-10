@@ -13,9 +13,13 @@
             </p>
         </main>
         <script>
-            const para = document.querySelector("main > p");
-            const lastParaChildNode = para.lastChild;
-            console.log(lastParaChildNode);
+            const newArticle = document.createElement("article");
+            document.querySelector("main").append(newArticle);
+            newArticle.innerHTML = "<h2>Article</h2>";
+
+            const newNav = document.createElement("nav");
+            document.querySelector("main").prepend(newNav);
+            newNav.innerHTML = "<h2>Navigation</h2>";
         </script>
     </body>
 </html>

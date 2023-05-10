@@ -1,26 +1,21 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <title>Adding a class to an element</title>
+        <title>So Many Kale Recipes</title>
     </head>
-    <style>
-        .my-class {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border: 6px dotted black;
-                font-family: Verdana, serif;
-                font-size: 2rem;
-                background-color: lightgray;
-            }
-    </style>
     <body>
-        <div id="my-div">
-            Hello World!
-        </div>
+        <header id="page-banner">
+            <h1>Above and Beyond the Kale of Duty</h1>
+        </header>
+        <main id="page-content">
+            <p>
+                Do you love to cook with <a href="kale.html">kale</a>?
+            </p>
+        </main>
         <script>
-            document.getElementById('my-div').classList.add('my-class');
+            const content = document.getElementById("page-content");
+            const firstContentChildNode = content.firstChild;
+            console.log(firstContentChildNode);
         </script>
     </body>
 </html>

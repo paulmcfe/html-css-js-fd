@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Adding a class to an element</title>
+        <style>
+            .my-class {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 6px dotted black;
+                    font-family: Verdana, serif;
+                    font-size: 2rem;
+                    background-color: lightgray;
+                }
+        </style>
+    </head>
+    <body>
+        <div id="my-div">
+            Hello World!
+        </div>
+        <script>
+            document.getElementById('my-div').classList.add('my-class');
+        </script>
+    </body>
+</html>

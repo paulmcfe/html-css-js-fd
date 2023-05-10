@@ -1,20 +1,21 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <title>Tweaking HTML Attributes with JavaScript</title>
+        <title>So Many Kale Recipes</title>
     </head>
     <body>
-        <header>
-            <img id="header-image"
-                src="mangosteen.png"
-                alt="Drawing of a mangosteen">
+        <header id="page-banner">
+            <h1>Above and Beyond the Kale of Duty</h1>
         </header>
+        <main id="page-content">
+            <p>
+                Do you love to cook with <a href="kale.html">kale</a>?
+            </p>
+        </main>
         <script>
-            const headerImage = document.getElementById('header-image');
-            console.log(headerImage.id);
-            console.log(headerImage.src);
-            console.log(headerImage.alt);
+            const content = document.getElementById("page-content");
+            const firstContentChildElement = content.firstElementChild;
+            console.log(firstContentChildElement);
         </script>
     </body>
 </html>
