@@ -18,9 +18,9 @@
         </div>
 
         <script>
-            // This function sorts numbers from lowest to highest
+            // This function sorts numbers from highest to lowest
             function numericSort(a, b) {
-                return (a - b);
+                return b - a;
             }
             
             const myArray = [3, 5, 1, 6, 2, 4];
@@ -30,8 +30,7 @@
             
             // Sort the array
             myArray.sort(numericSort);
-            
-            // Write the array after sorting it
+
             str+= "myArray (after sorting): " + myArray;
             
             document.getElementById('output').innerHTML = str;
