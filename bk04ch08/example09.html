@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Converting getMonth() into a month name - array technique</title>
+        <title>Extracting the month name from a date</title>
         <style>
             body {
                 margin: 1em;
@@ -18,10 +18,8 @@
         </div>
 
         <script>
-            const monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
             const dateNow = new Date();
-            const monthNow = dateNow.getMonth();
-            document.getElementById("output").innerHTML = `getMonth() is ${monthNow}; the name is ${monthNames[monthNow]}`;
+            document.getElementById("output").innerHTML = `The date is ${dateNow}<br>The month name is ${dateNow.toLocaleDateString('default', { month: 'long' })}`;
         </script>
     </body>
 </html>

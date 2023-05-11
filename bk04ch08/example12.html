@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Converting getDate() into a day name - function technique</title>
+        <title>Determining a person’s age</title>
         <style>
             body {
                 margin: 1em;
@@ -14,25 +14,47 @@
         </style>
     </head>
     <body>
+        <label for="date-picker">Select your birth date:</label>
+        <input type="date" id="date-picker" value="2000-01-01">
+
         <div id="output">
         </div>
 
-        <script>
-            function dayName(dayValue) {
-                switch (dayValue) {
-                    case 0 : return "Sunday";
-                    case 1 : return "Monday";
-                    case 2 : return "Tuesday";
-                    case 3 : return "Wednesday";
-                    case 4 : return "Thursday";
-                    case 5 : return "Friday";
-                    case 6 : return "Saturday";
-                }
-            }
+        <script>            
+            // Add a `change` event listener to the date picker
+            const datePicker = document.querySelector('#date-picker');
+            datePicker.addEventListener('change', calculateAge);
             
-            const dateNow = new Date();
-            const dayNow = dateNow.getDay();
-            document.getElementById("output").innerHTML = `getDay() is ${dayNow}; the name is ${dayName(dayNow)}`;
+            // Run this function when the date changes
+            function calculateAge() {
+                
+                // Create a new Date object from the date picker value
+                const birthDate = new Date(datePicker.value);
+                
+                // Store the user's birth year
+                const birthYear = birthDate.getFullYear();
+                
+                // Make a Date object and set it
+                // to the user's birthday this year
+                const birthdayDate = new Date();
+                birthdayDate.setMonth(birthDate.getMonth());
+                birthdayDate.setDate(birthDate.getDate());
+                
+                // Store the current date and current year
+                const currentDate = new Date();
+                const currentYear = currentDate.getFullYear();
+                
+                // Calculate the user's age
+                let userAge = currentYear - birthYear;
+            
+                // Has the birthday occurred yet this year?
+                if (currentDate < birthdayDate) {
+                    // If not, adjust the age down by one year
+                    userAge -= 1;
+                }
+                // Output the result
+                document.getElementById("output").innerHTML = `You are ${userAge} years old.`;
+            }
         </script>
     </body>
 </html>

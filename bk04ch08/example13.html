@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Converting getDate() into a day name - function technique</title>
+        <title>Determining a person’s age</title>
         <style>
             body {
                 margin: 1em;
@@ -14,34 +14,54 @@
         </style>
     </head>
     <body>
+        <div>
+            <label for="date-picker1">Select the first date:</label>
+            <input type="date" id="date-picker1" value="2000-01-01">
+        </div>
+        <div>
+            <label for="date-picker2">Select the first date:</label>
+            <input type="date" id="date-picker2" value="2001-01-01">
+        </div>
         <div id="output">
         </div>
 
         <script>
-            const monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+            // Add a `change` event listener to each date picker
+            const datePicker1 = document.querySelector('#date-picker1');
+            datePicker1.addEventListener('change', handler);
+            const datePicker2 = document.querySelector('#date-picker2');
+            datePicker2.addEventListener('change', handler);
             
-            const dayNames = ["Sunday","Monday","Tuesday",
-            "Wednesday","Thursday","Friday","Saturday"];
+            // Run this function when the date changes
+            function handler() {
+                
+                // Get the dates from the date pickers
+                const date1 = new Date(datePicker1.value);
+                const date2 = new Date(datePicker2.value);
+                
+                // Calculate the number of days between the dates
+                const daysDiff = daysBetween(date1, date2);
+                
+                // Output the result
+                document.getElementById("output").innerHTML = `Difference: ${daysDiff} ${ daysDiff === 1 ? ' day' : ' days'} between the two dates.`;
+
+            }
+            function daysBetween(date1, date2) {
             
-            // Set the year, month, and day
-            const userYear = 2023;
-            const userMonth = 11;
-            const userDay = 31;
+                // Convert both dates to milliseconds
+                const date1Ms = date1.getTime();
+                const date2Ms = date2.getTime();
             
-            // Make a date object then use the data to change the date
-            const userDate = new Date();
-            userDate.setFullYear(userYear);
-            userDate.setMonth(userMonth);
-            userDate.setDate(userDay);
+                // Calculate the difference in milliseconds
+                const differenceMs = Math.abs(date1Ms - date2Ms);
             
-            // Convert the numbers into names
-            const dayName = dayNames[userDate.getDay()];
-            const monthName = monthNames[userDate.getMonth()];
+                // The number of milliseconds in one day
+                const ONEDAY = 1000 * 60 * 60 * 24;
             
-            // Display the message
-            document.getElementById("output").innerHTML = `The date 
-                entered was: ${monthName} ${userDay}, ${userYear} 
-                <br>The day of the week is: ${dayName}`;
+                // Convert to days and return
+                return Math.round(differenceMs/ONEDAY);
+            }
+            handler();
         </script>
     </body>
 </html>

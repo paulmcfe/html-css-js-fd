@@ -2,28 +2,81 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Converting getDay() into a day name - array technique</title>
+        <title>Setting the date</title>
         <style>
             body {
                 margin: 1em;
                 font-size: 1.5em;
             }
+            fieldset {
+                max-width: fit-content;
+            }
             div {
                 margin-top: .5em;
+            }
+            input {
+                border: 1px solid hsl(0deg 0% 50%);
+                font-family: inherit;
+                font-size: 1.25rem;
             }
         </style>
     </head>
     <body>
+        <fieldset>
+            <legend>Enter the year, month, and day:</legend>
+        <div>
+            <label for="user-year">Enter a year:</label>
+            <input type="text" id="user-year" size="4" value="2024">
+        </div>
+        <div>
+            <label for="user-month">Enter a month (1-12):</label>
+            <input type="text" id="user-month" size="2" value="1">
+        </div>
+        <div>
+            <label for="user-day">Enter a day (1-31):</label>
+            <input type="text" id="user-day" size="2" value="1">
+        </div>
+        </fieldset>        
         <div id="output">
         </div>
 
         <script>
-            const dayNames = ["Sunday","Monday","Tuesday",
-            "Wednesday","Thursday","Friday","Saturday"];
             
-            const dateNow = new Date();
-            const dayNow = dateNow.getDay();
-            document.getElementById("output").innerHTML = `getDay() is ${dayNow}; the name is ${dayNames[dayNow]}`
+            // Get the inputs
+            const inputs = document.querySelectorAll('input');
+            
+            // Add a `change` event listener to each input
+            inputs.forEach( input => {
+                input.addEventListener('change', makeDate);
+            });
+            
+            // Run this function each time an input changes
+            function makeDate() {
+                
+                // Get the year, month (minus 1), and day
+                const userYear = document.querySelector('#user-year').value;
+                const userMonth = document.querySelector('#user-month').value - 1;
+                const userDay = document.querySelector('#user-day').value;
+                
+                // Create a new Date object
+                const userDate = new Date();
+                
+                // Set the year, month, and date
+                userDate.setFullYear(userYear);
+                userDate.setMonth(userMonth);
+                userDate.setDate(userDay);
+                
+                // Convert the date info to strings
+                const dateString = userDate.toLocaleDateString('default', { month: 'long', day: 'numeric', year: 'numeric' });
+                const dayName = userDate.toLocaleDateString('default', { weekday: 'long' });
+                
+                // Display the message
+                document.getElementById("output").innerHTML = 
+                    `The date entered is: ${dateString} 
+                    <br>The day of the week is: ${dayName}`;
+            }
+            // Run the function as soon as the page loads
+            makeDate();
         </script>
     </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Extracting the day name from a date</title>
+        <title>Simple email validation with includes()</title>
         <style>
             body {
                 margin: 1em;
@@ -14,12 +14,12 @@
         </style>
     </head>
     <body>
-        <div id="output">
-        </div>
-
         <script>
-            const dateNow = new Date();
-            document.getElementById("output").innerHTML = `The date is ${dateNow}<br>The day name is ${dateNow.toLocaleDateString('default', { weekday: 'long' })}`;
+            let emailAddress = "";
+            do {
+                emailAddress = prompt("Enter a valid email address:");
+            } 
+            while (!emailAddress.includes("@"));
         </script>
     </body>
 </html>
