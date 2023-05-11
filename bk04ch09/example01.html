@@ -2,38 +2,44 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Stringifying a JavaScript object to JSON</title>
+        <title>Declaring and using JSON variables</title>
         <style>
             body {
                 margin: 1em;
                 font-size: 1.5em;
             }
-            pre {
+            div {
                 margin-top: .5em;
             }
         </style>
     </head>
     <body>
-        <pre id="output">
-        </pre>
+        <div id="output">
+        </div>
 
         <script>
+            
             // Declare a JavaScript object
-            const userData = {
-                bgColor: "darkolivegreen",
-                textColor: "antiquewhite",
-                textSize: "1.25em",
-                typefaces: ["Georgia", "Verdana", "serif"],
-                subscriber: true,
-                subscriptionType: 3
+            const customer = {
+                "account": 853,
+                "name": "Alfreds Futterkiste",
+                "supplier": false,
+                "recentOrders": [28394,29539,30014],
+                "contact": {
+                    "name": "Maria Anders",
+                    "phone": "030-0074321",
+                    "email": "anders@futterkiste.com"
+                }
             }
-            
-            // Stringify it
-            const userDataJSON = JSON.stringify(userData, null, "    ");
-            
-            // Display the result
-            document.querySelector('#output').innerHTML = userDataJSON;
-            console.log(userDataJSON);
+
+            // Display the results
+            const outputString = 
+                `Customer’s account number: ${customer.account}<br>
+                Customer’s account name: ${customer.name}<br>
+                Customer’s 2nd order number: ${customer.recentOrders[1]}<br>
+                Customer’s account email: ${customer.contact.email}`;
+
+            document.querySelector('#output').innerHTML = outputString;
         </script>
     </body>
 </html>

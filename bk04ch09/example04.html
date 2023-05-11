@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Getting Data from Web Storage</title>
+        <title>Adding Data to Web Storage</title>
         <style>
             body {
                 margin: 1em;
@@ -12,11 +12,18 @@
     </head>
     <body>
         <script>
-            // Get the data from storage
-            const userData = JSON.parse(localStorage.getItem('user-data'));
+            // Declare a JavaScript object
+            const userData = {
+                bgColor: "darkolivegreen",
+                textColor: "antiquewhite",
+                textSize: "1.25em",
+                typefaces: ["Georgia", "Verdana", "serif"],
+                subscriber: true,
+                subscriptionType: 3
+            }
             
-            // Display it
-            console.log(userData);
+            // Store it
+            localStorage.setItem('user-data', JSON.stringify(userData));
         </script>
     </body>
 </html>

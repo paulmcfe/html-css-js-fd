@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Getting Data from Web Storage</title>
+        <style>
+            body {
+                margin: 1em;
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            // Get the data from storage
+            const userData = JSON.parse(localStorage.getItem('user-data'));
+            
+            // Display it
+            console.log(userData);
+        </script>
+    </body>
+</html>

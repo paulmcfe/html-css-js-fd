@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Adding Data to Web Storage</title>
+        <title>Converting a JSON string to a JavaScript object</title>
         <style>
             body {
                 margin: 1em;
@@ -12,18 +12,25 @@
     </head>
     <body>
         <script>
-            // Declare a JavaScript object
-            const userData = {
-                bgColor: "darkolivegreen",
-                textColor: "antiquewhite",
-                textSize: "1.25em",
-                typefaces: ["Georgia", "Verdana", "serif"],
-                subscriber: true,
-                subscriptionType: 3
-            }
+            // Declare a JSON string
+            const userDataJSON = `{
+                "bgColor": "darkolivegreen",
+                "textColor": "antiquewhite",
+                "textSize": "1.25em",
+                "typefaces": [
+                    "Georgia",
+                    "Verdana",
+                    "serif"
+                ],
+                "subscriber": true,
+                "subscriptionType": 3
+            }`;
             
-            // Store it
-            localStorage.setItem('user-data', JSON.stringify(userData));
+            // Parse it
+            const userData = JSON.parse(userDataJSON);
+            
+            // Display the result
+            console.log(userData);
         </script>
     </body>
 </html>
