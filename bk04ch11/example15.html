@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Handling and Triggering Form Events</title>
+        <title>Listening for element changes</title>
         <style>
             * {
                 margin: 0;
@@ -24,8 +24,8 @@
             <input id="bgcolor" type="color" name="bg-color" value="#ffffff">
         </form>
         <script>
-            document.querySelector('#bgcolor').addEventListener('change', function() {
-                let backgroundColor = this.value;
+            document.querySelector('#bgcolor').addEventListener('change', (event) => {
+                let backgroundColor = event.target.value;
                 document.body.bgColor = backgroundColor;
             });
         </script>

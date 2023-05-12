@@ -26,20 +26,22 @@
         </style>
     </head>
     <body>
-        <button>
-            Run Me!
-        </button>
+        <form>
+            <button type="button">
+                Run Me!
+            </button>
+        </form>
         <p>
-        Keyboard shortcut: Ctrl+Shift+B
+        Keyboard shortcut: Ctrl+Shift+E
         </p>
         <script>
             // Add a listener for the button's 'click' event
             document
                 .querySelector('button')
                 .addEventListener('click', 
-                function() {
+                (event) => {
                     // Change the button text
-                    this.innerText = 'Thanks!';
+                    event.target.innerText = 'Thanks!';
                 
                     // Reset the button after 3 seconds
                     setTimeout(() => document
@@ -51,9 +53,9 @@
             // Add a listener for the 'keydown' event
             document
                 .addEventListener('keydown', 
-                function(e) {
-                    // Check to see if Ctrl+Shift+B are all pressed
-                    if(e.ctrlKey && e.shiftKey && e.key === 'B') {
+                function(event) {
+                    // Check whether Ctrl+Shift+E are all pressed
+                    if(event.ctrlKey && event.shiftKey && event.key === 'E') {
                         // If so, trigger the button's 'click' event
                         document.querySelector('button').click();
                     }
