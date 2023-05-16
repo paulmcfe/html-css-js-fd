@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>You want a flex item to have a maximum width</title>
+        <title>You want a flex item to have minimum and maximum widths</title>
         <style>
             * {
                 box-sizing: border-box;
@@ -38,6 +38,12 @@
             }
             .narrow::before {
                 content: "container width: 425px";
+            }
+            .medium {
+                width: 600px;
+            }
+            .medium::before {
+                content: "container width: 600px";
             }
             .wide {
                 width: 850px;
@@ -77,6 +83,15 @@
     <body>
         <div class="wrapper">
             <div class="container narrow">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+                <div class="item item4">4</div>
+                <div class="item item5">5</div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="container medium">
                 <div class="item item1">1</div>
                 <div class="item item2">2</div>
                 <div class="item item3">3</div>
